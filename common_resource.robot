@@ -110,6 +110,10 @@ Tallenna Suunnitelma Ja Lähetä
 	Wait Until Element Is Visible  		//*[@id='section-sidebar_storage']/div/div[7]/div/div[2]/button[1]    timeout=30s
 
 
+
+
+
+
 # Tästä alkaa Slideco Management System keywordit
 
 Sisäänkirjaudu Slideco Management System
