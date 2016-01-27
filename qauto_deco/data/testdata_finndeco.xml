@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testset>
+	<testcase name="ovimallit">
+		<parameter name="ovimalli" pagemodel="ovimallit" value="ovi_pysty_2"/>
+	</testcase>
+	<testcase name="profiili_materiaalit">
+		<parameter name="s200_materiaalit" value="hopea"/>
+		<parameter name="s100_materiaalit" value="hopea"/>
+		<parameter name="a101_materiaalit" value="hopea"/>
+		<parameter name="a102_materiaalit" value="hopea"/>
+		<parameter name="a103_materiaalit" value="hopea"/>
+		<parameter name="a104_materiaalit" value="hopea"/>
+	</testcase>
+	<testcase name="liukuovi_profiili">
+		<parameter name="profiili" pagemodel="liukovet_profiili" value="s100"/>
+	</testcase>
+	<testcase name="ovet">
+		<parameter name="ovien_maara" pagemodel="valitse_ovien_maara" value="2"/>
+	</testcase>
+	<testcase name="yhteystiedot">
+		<parameter name="full_name" pagemodel="hinta_ja_laheta" value="Testiautomaation"/>
+		<parameter name="email" pagemodel="hinta_ja_laheta" value="qfa@q-factory.fi"/>
+	</testcase>
+	<testcase name="runkoosat">
+		<parameter name="kattolevy" pagemodel="runkoosat" value="true"/>
+	</testcase>
+	<testcase name="korkeus_ja_leveys">
+		<parameter name="leveys1" pagemodel="korkeus_leveys" value="1"/>
+		<parameter name="leveys2" pagemodel="korkeus_leveys" value="5"/>
+		<parameter name="leveys3" pagemodel="korkeus_leveys" value="0"/>
+		<parameter name="leveys4" pagemodel="korkeus_leveys" value="0"/>
+		<parameter name="korkeus1" pagemodel="korkeus_leveys" value="2"/>
+		<parameter name="korkeus2" pagemodel="korkeus_leveys" value="5"/>
+		<parameter name="korkeus3" pagemodel="korkeus_leveys" value="0"/>
+		<parameter name="korkeus4" pagemodel="korkeus_leveys" value="0"/>
+	</testcase>
+	<testcase name="pintamateriaalit">
+		<parameter name="pintamateriaali" pagemodel="pintamateriaalit" value="maalatut lasit"/>
+		<parameter name="pintamateriaali_vaihtoehdot" pagemodel="pintamateriaalit" value="cappucino"/>
+	</testcase>
+</testset>

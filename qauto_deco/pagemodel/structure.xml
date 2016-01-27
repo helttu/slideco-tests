@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<structure test_data_file="">
+	<nodes>
+		<node id="1." pagemodel="open_application"/>
+		<node id="d394c64f-c01f-11e5-a245-a94980e8de8d" pagemodel="aloita_suunnitelu"/>
+		<node id="f7dd1acf-c01f-11e5-8c94-a94980e8de8d" pagemodel="ala_palkki"/>
+		<node id="a7f4ae80-c02d-11e5-9da8-a94980e8de8d" pagemodel="valinta_kork_ja_lev"/>
+		<node id="2e873670-c02e-11e5-b6ad-a94980e8de8d" pagemodel="valitse_ovien_maara"/>
+		<node id="fa83d630-c032-11e5-9353-a94980e8de8d" pagemodel="liukovet_profiili"/>
+		<node id="8bbcdc9e-c038-11e5-80b5-a94980e8de8d" pagemodel="s200_profiili"/>
+		<node id="e2cac7ee-c038-11e5-a5a5-a94980e8de8d" pagemodel="s100_profiili"/>
+		<node id="09353921-c039-11e5-90fa-a94980e8de8d" pagemodel="a101_profiili"/>
+		<node id="3bceb6e1-c039-11e5-a118-a94980e8de8d" pagemodel="a102_profiili"/>
+		<node id="6488964f-c039-11e5-95ec-a94980e8de8d" pagemodel="a103_profiili"/>
+		<node id="fc1f3280-c039-11e5-8b6b-a94980e8de8d" pagemodel="a104_profiili"/>
+		<node id="01636f5e-c03d-11e5-a420-a94980e8de8d" pagemodel="liukuoven_hidastimet"/>
+		<node id="63c5beb0-c03d-11e5-9fdb-a94980e8de8d" pagemodel="runkoosat"/>
+		<node id="81ed66c0-c03f-11e5-b66f-a94980e8de8d" pagemodel="ovimallit"/>
+		<node id="8008368f-c040-11e5-afbb-a94980e8de8d" pagemodel="jakolistat"/>
+		<node id="110f70e1-c041-11e5-8414-a94980e8de8d" pagemodel="pintamateriaalit"/>
+		<node id="cb99f521-c041-11e5-9ccd-a94980e8de8d" pagemodel="maalatut_lasit"/>
+		<node id="01892d91-c042-11e5-8a45-a94980e8de8d" pagemodel="peilit"/>
+		<node id="2f99c7cf-c042-11e5-967d-a94980e8de8d" pagemodel="levyt"/>
+		<node id="59dcb840-c042-11e5-9b67-a94980e8de8d" pagemodel="tehostelevyt"/>
+		<node id="9ddb07e1-c042-11e5-aaba-a94980e8de8d" pagemodel="hinta_ja_laheta"/>
+		<node id="96ab2300-c0c0-11e5-b425-a94980e8de8d" pagemodel="komerokoodi"/>
+		<node id="90f4aa0f-c0c2-11e5-bca3-a94980e8de8d" pagemodel="kehasavy"/>
+	</nodes>
+	<edges>
+		<edge additional_input="False" id="fc549930-c01f-11e5-bdbc-a94980e8de8d">
+			<start_node id="1."/>
+			<end_node id="f7dd1acf-c01f-11e5-8c94-a94980e8de8d"/>
+			<input data="" method_name="" method_node="" parameters="False"/>
+			<output data="" method_name="" parameters="False"/>
+			<preconditions/>
+			<performance think_time="1.0" url="http://" weight="1.0">
+				<request>
+					<method value="GET"/>
+					<content_type value="text/html"/>
+					<parameters/>
+				</request>
+			</performance>
+			<set_guard key="" value=""/>
+			<check_guard key="" value=""/>
+			<epics/>
+		</edge>
+		<edge additional_input="False" id="fe4879ee-c01f-11e5-8b18-a94980e8de8d">
+			<start_node id="f7dd1acf-c01f-11e5-8c94-a94980e8de8d"/>
+			<end_node id="d394c64f-c01f-11e5-a245-a94980e8de8d"/>
+			<input data="" method_name="" method_node="" parameters="False"/>
+			<output data="" method_name="" parameters="False"/>
+			<preconditions/>
+			<performance think_time="1.0" url="http://" weight="1.0">
+				<request>
+					<method value="GET"/>
+					<content_type value="text/html"/>
+					<parameters/>
+				</request>
+			</performance>
+			<set_guard key="" value=""/>
+			<check_guard key="" value=""/>
+			<epics/>
+		</edge>
+		<edge additional_input="False" id="ac323121-c02d-11e5-8503-a94980e8de8d">
+			<start_node id="d394c64f-c01f-11e5-a245-a94980e8de8d"/>
+			<end_node id="a7f4ae80-c02d-11e5-9da8-a94980e8de8d"/>
+			<input data="" method_name="" method_node="" parameters="False"/>
+			<output data="" method_name="" parameters="False"/>
+			<preconditions/>
+			<performance think_time="1.0" url="http://" weight="1.0">
+				<request>
+					<method value="GET"/>
+					<content_type value="text/html"/>
+					<parameters/>
+				</request>
+			</performance>
+			<set_guard key="" value=""/>
+			<check_guard key="" value=""/>
+			<epics/>
+		</edge>
+		<edge additional_input="False" id="2e873671-c02e-11e5-a260-a94980e8de8d">
+			<start_node id="a7f4ae80-c02d-11e5-9da8-a94980e8de8d"/>
+			<end_node id="2e873670-c02e-11e5-b6ad-a94980e8de8d"/>
+			<input data="" method_name="" method_node="" parameters="False"/>
+			<output data="" method_name="" parameters="False"/>
+			<preconditions/>
+			<performance think_time="1.0" url="http://" weight="1.0">
+				<request>
+					<method value="GET"/>
+					<content_type value="text/html"/>
+					<parameters/>
+				</request>
+			</performance>
+			<set_guard key="" value=""/>
+			<check_guard key="" value=""/>
+			<epics/>
+		</edge>
+		<edge additional_input="False" id="fa83d631-c032-11e5-aabc-a94980e8de8d">
+			<start_node id="2e873670-c02e-11e5-b6ad-a94980e8de8d"/>
+			<end_node id="fa83d630-c032-11e5-9353-a94980e8de8d"/>
+			<input data="" method_name="" method_node="" parameters="False"/>
+			<output data="" method_name="" parameters="False"/>
+			<preconditions/>
+			<performance think_time="1.0" url="http://" weight="1.0">
+				<request>
+					<method value="GET"/>
+					<content_type value="text/html"/>
+					<parameters/>
+				</request>
+			</performance>
+			<set_guard key="" value=""/>
+			<check_guard key="" value=""/>
+			<epics/>
+		</edge>
+		<edge additional_input="False" id="8bbcdc9f-c038-11e5-88a6-a94980e8de8d">
+			<start_node id="fa83d630-c032-11e5-9353-a94980e8de8d"/>
+			<end_node id="8bbcdc9e-c038-11e5-80b5-a94980e8de8d"/>
+			<input data="" method_name="" method_node="" parameters="False"/>
+			<output data="" method_name="" parameters="False"/>
+			<preconditions/>
+			<performance think_time="1.0" url="http://" weight="1.0">
+				<request>
+					<method value="GET"/>
+					<content_type value="text/html"/>
+					<parameters/>
+				</request>
+			</performance>
+			<set_guard key="" value=""/>
+			<check_guard key="" value=""/>
+			<epics/>
+		</edge>
+		<edge additional_input="False" id="e2cac7ef-c038-11e5-b7d3-a94980e8de8d">
+			<start_node id="fa83d630-c032-11e5-9353-a94980e8de8d"/>
+			<end_node id="e2cac7ee-c038-11e5-a5a5-a94980e8de8d"/>
+			<input data="" method_name="" method_node="" parameters="False"/>
+			<output data="" method_name="" parameters="False"/>
+			<preconditions/>
+			<performance think_time="1.0" url="http://" weight="1.0">
+				<request>
+					<method value="GET"/>
+					<content_type value="text/html"/>
+					<parameters/>
+				</request>
+			</performance>
+			<set_guard key="" value=""/>
+			<check_guard key="" value=""/>
+			<epics/>
+		</edge>
+		<edge additional_input="False" id="0b82f9ae-c039-11e5-b3ff-a94980e8de8d">
+			<start_node id="fa83d630-c032-11e5-9353-a94980e8de8d"/>
+			<end_node id="09353921-c039-11e5-90fa-a94980e8de8d"/>
+			<input data="" method_name="" method_node="" parameters="False"/>
+			<output data="" method_name="" parameters="False"/>
+			<preconditions/>
+			<performance think_time="1.0" url="http://" weight="1.0">
+				<request>
+					<method value="GET"/>
+					<content_type value="text/html"/>
+					<parameters/>
+				</request>
+			</performance>
+			<set_guard key="" value=""/>
+			<check_guard key="" value=""/>
+			<epics/>
+		</edge>
+		<edge additional_input="False" id="3bceb6e2-c039-11e5-9122-a94980e8de8d">
+			<start_node id="fa83d630-c032-11e5-9353-a94980e8de8d"/>
+			<end_node id="3bceb6e1-c039-11e5-a118-a94980e8de8d"/>
+			<input data="" method_name="" method_node="" parameters="False"/>
+			<output data="" method_name="" parameters="False"/>
+			<preconditions/>
+			<performance think_time="1.0" url="http://" weight="1.0">
+				<request>
+					<method value="GET"/>
+					<content_type value="text/html"/>
+					<parameters/>
+				</request>
+			</performance>
+			<set_guard key="" value=""/>
+			<check_guard key="" value=""/>
+			<epics/>
+		</edge>
+		<edge additional_input="False" id="fdcfa1a1-c039-11e5-8b14-a94980e8de8d">
+			<start_node id="fa83d630-c032-11e5-9353-a94980e8de8d"/>
+			<end_node id="6488964f-c039-11e5-95ec-a94980e8de8d"/>
+			<input data="" method_name="" method_node="" parameters="False"/>
+			<output data="" method_name="" parameters="False"/>
+			<preconditions/>
+			<performance think_time="1.0" url="http://" weight="1.0">
+				<request>
+					<method value="GET"/>
+					<content_type value="text/html"/>
+					<parameters/>
+				</request>
+			</performance>
+			<set_guard key="" value=""/>
+			<check_guard key="" value=""/>
+			<epics/>
+		</edge>
+		<edge additional_input="False" id="ff775e30-c039-11e5-93ba-a94980e8de8d">
+			<start_node id="fa83d630-c032-11e5-9353-a94980e8de8d"/>
+			<end_node id="fc1f3280-c039-11e5-8b6b-a94980e8de8d"/>
+			<input data="" method_name="" method_node="" parameters="False"/>
+			<output data="" method_name="" parameters="False"/>
+			<preconditions/>
+			<performance think_time="1.0" url="http://" weight="1.0">
+				<request>
+					<method value="GET"/>
+					<content_type value="text/html"/>
+					<parameters/>
+				</request>
+			</performance>
+			<set_guard key="" value=""/>
+			<check_guard key="" value=""/>
+			<epics/>
+		</edge>
+		<edge additional_input="False" id="01636f5f-c03d-11e5-94c1-a94980e8de8d">
+			<start_node id="fa83d630-c032-11e5-9353-a94980e8de8d"/>
+			<end_node id="01636f5e-c03d-11e5-a420-a94980e8de8d"/>
+			<input data="" method_name="" method_node="" parameters="False"/>
+			<output data="" method_name="" parameters="False"/>
+			<preconditions/>
+			<performance think_time="1.0" url="http://" weight="1.0">
+				<request>
+					<method value="GET"/>
+					<content_type value="text/html"/>
+					<parameters/>
+				</request>
+			</performance>
+			<set_guard key="" value=""/>
+			<check_guard key="" value=""/>
+			<epics/>
+		</edge>
+		<edge additional_input="False" id="63c5beb1-c03d-11e5-986f-a94980e8de8d">
+			<start_node id="01636f5e-c03d-11e5-a420-a94980e8de8d"/>
+			<end_node id="63c5beb0-c03d-11e5-9fdb-a94980e8de8d"/>
+			<input data="" method_name="" method_node="" parameters="False"/>
+			<output data="" method_name="" parameters="False"/>
+			<preconditions/>
+			<performance think_time="1.0" url="http://" weight="1.0">
+				<request>
+					<method value="GET"/>
+					<content_type value="text/html"/>
+					<parameters/>
+				</request>
+			</performance>
+			<set_guard key="" value=""/>
+			<check_guard key="" value=""/>
+			<epics/>
+		</edge>
+		<edge additional_input="False" id="81ed66c1-c03f-11e5-b923-a94980e8de8d">
+			<start_node id="63c5beb0-c03d-11e5-9fdb-a94980e8de8d"/>
+			<end_node id="81ed66c0-c03f-11e5-b66f-a94980e8de8d"/>
+			<input data="" method_name="" method_node="" parameters="False"/>
+			<output data="" method_name="" parameters="False"/>
+			<preconditions/>
+			<performance think_time="1.0" url="http://" weight="1.0">
+				<request>
+					<method value="GET"/>
+					<content_type value="text/html"/>
+					<parameters/>
+				</request>
+			</performance>
+			<set_guard key="" value=""/>
+			<check_guard key="" value=""/>
+			<epics/>
+		</edge>
+		<edge additional_input="False" id="80083690-c040-11e5-a873-a94980e8de8d">
+			<start_node id="81ed66c0-c03f-11e5-b66f-a94980e8de8d"/>
+			<end_node id="8008368f-c040-11e5-afbb-a94980e8de8d"/>
+			<input data="" method_name="" method_node="" parameters="False"/>
+			<output data="" method_name="" parameters="False"/>
+			<preconditions/>
+			<performance think_time="1.0" url="http://" weight="1.0">
+				<request>
+					<method value="GET"/>
+					<content_type value="text/html"/>
+					<parameters/>
+				</request>
+			</performance>
+			<set_guard key="" value=""/>
+			<check_guard key="" value=""/>
+			<epics/>
+		</edge>
+		<edge additional_input="False" id="110f70e2-c041-11e5-8143-a94980e8de8d">
+			<start_node id="8008368f-c040-11e5-afbb-a94980e8de8d"/>
+			<end_node id="110f70e1-c041-11e5-8414-a94980e8de8d"/>
+			<input data="" method_name="" method_node="" parameters="False"/>
+			<output data="" method_name="" parameters="False"/>
+			<preconditions/>
+			<performance think_time="1.0" url="http://" weight="1.0">
+				<request>
+					<method value="GET"/>
+					<content_type value="text/html"/>
+					<parameters/>
+				</request>
+			</performance>
+			<set_guard key="" value=""/>
+			<check_guard key="" value=""/>
+			<epics/>
+		</edge>
+		<edge additional_input="False" id="cb99f522-c041-11e5-8451-a94980e8de8d">
+			<start_node id="110f70e1-c041-11e5-8414-a94980e8de8d"/>
+			<end_node id="cb99f521-c041-11e5-9ccd-a94980e8de8d"/>
+			<input data="" method_name="" method_node="" parameters="False"/>
+			<output data="" method_name="" parameters="False"/>
+			<preconditions/>
+			<performance think_time="1.0" url="http://" weight="1.0">
+				<request>
+					<method value="GET"/>
+					<content_type value="text/html"/>
+					<parameters/>
+				</request>
+			</performance>
+			<set_guard key="" value=""/>
+			<check_guard key="" value=""/>
+			<epics/>
+		</edge>
+		<edge additional_input="False" id="018954a1-c042-11e5-88d0-a94980e8de8d">
+			<start_node id="110f70e1-c041-11e5-8414-a94980e8de8d"/>
+			<end_node id="01892d91-c042-11e5-8a45-a94980e8de8d"/>
+			<input data="" method_name="" method_node="" parameters="False"/>
+			<output data="" method_name="" parameters="False"/>
+			<preconditions/>
+			<performance think_time="1.0" url="http://" weight="1.0">
+				<request>
+					<method value="GET"/>
+					<content_type value="text/html"/>
+					<parameters/>
+				</request>
+			</performance>
+			<set_guard key="" value=""/>
+			<check_guard key="" value=""/>
+			<epics/>
+		</edge>
+		<edge additional_input="False" id="2f99eede-c042-11e5-a975-a94980e8de8d">
+			<start_node id="110f70e1-c041-11e5-8414-a94980e8de8d"/>
+			<end_node id="2f99c7cf-c042-11e5-967d-a94980e8de8d"/>
+			<input data="" method_name="" method_node="" parameters="False"/>
+			<output data="" method_name="" parameters="False"/>
+			<preconditions/>
+			<performance think_time="1.0" url="http://" weight="1.0">
+				<request>
+					<method value="GET"/>
+					<content_type value="text/html"/>
+					<parameters/>
+				</request>
+			</performance>
+			<set_guard key="" value=""/>
+			<check_guard key="" value=""/>
+			<epics/>
+		</edge>
+		<edge additional_input="False" id="59dcb841-c042-11e5-a3d8-a94980e8de8d">
+			<start_node id="110f70e1-c041-11e5-8414-a94980e8de8d"/>
+			<end_node id="59dcb840-c042-11e5-9b67-a94980e8de8d"/>
+			<input data="" method_name="" method_node="" parameters="False"/>
+			<output data="" method_name="" parameters="False"/>
+			<preconditions/>
+			<performance think_time="1.0" url="http://" weight="1.0">
+				<request>
+					<method value="GET"/>
+					<content_type value="text/html"/>
+					<parameters/>
+				</request>
+			</performance>
+			<set_guard key="" value=""/>
+			<check_guard key="" value=""/>
+			<epics/>
+		</edge>
+		<edge additional_input="False" id="9ddb07e2-c042-11e5-a824-a94980e8de8d">
+			<start_node id="110f70e1-c041-11e5-8414-a94980e8de8d"/>
+			<end_node id="9ddb07e1-c042-11e5-aaba-a94980e8de8d"/>
+			<input data="" method_name="" method_node="" parameters="False"/>
+			<output data="" method_name="" parameters="False"/>
+			<preconditions/>
+			<performance think_time="1.0" url="http://" weight="1.0">
+				<request>
+					<method value="GET"/>
+					<content_type value="text/html"/>
+					<parameters/>
+				</request>
+			</performance>
+			<set_guard key="" value=""/>
+			<check_guard key="" value=""/>
+			<epics/>
+		</edge>
+		<edge additional_input="False" id="a6ca075e-c0c0-11e5-bbbb-a94980e8de8d">
+			<start_node id="9ddb07e1-c042-11e5-aaba-a94980e8de8d"/>
+			<end_node id="96ab2300-c0c0-11e5-b425-a94980e8de8d"/>
+			<input data="" method_name="" method_node="" parameters="False"/>
+			<output data="" method_name="" parameters="False"/>
+			<preconditions/>
+			<performance think_time="1.0" url="http://" weight="1.0">
+				<request>
+					<method value="GET"/>
+					<content_type value="text/html"/>
+					<parameters/>
+				</request>
+			</performance>
+			<set_guard key="" value=""/>
+			<check_guard key="" value=""/>
+			<epics/>
+		</edge>
+		<edge additional_input="False" id="90f4aa10-c0c2-11e5-9162-a94980e8de8d">
+			<start_node id="63c5beb0-c03d-11e5-9fdb-a94980e8de8d"/>
+			<end_node id="90f4aa0f-c0c2-11e5-bca3-a94980e8de8d"/>
+			<input data="" method_name="" method_node="" parameters="False"/>
+			<output data="" method_name="" parameters="False"/>
+			<preconditions/>
+			<performance think_time="1.0" url="http://" weight="1.0">
+				<request>
+					<method value="GET"/>
+					<content_type value="text/html"/>
+					<parameters/>
+				</request>
+			</performance>
+			<set_guard key="" value=""/>
+			<check_guard key="" value=""/>
+			<epics/>
+		</edge>
+	</edges>
+</structure>
