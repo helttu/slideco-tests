@@ -25,6 +25,8 @@
 		<node id="9ddb07e1-c042-11e5-aaba-a94980e8de8d" pagemodel="hinta_ja_laheta"/>
 		<node id="96ab2300-c0c0-11e5-b425-a94980e8de8d" pagemodel="komerokoodi"/>
 		<node id="90f4aa0f-c0c2-11e5-bca3-a94980e8de8d" pagemodel="kehasavy"/>
+		<node id="07bf7d0f-c59f-11e5-8e9d-2c600cd4c6d7" pagemodel="kauppias_login"/>
+		<node id="b18e6061-c5a2-11e5-897e-2c600cd4c6d7" pagemodel="kauppias_account"/>
 	</nodes>
 	<edges>
 		<edge additional_input="False" id="fc549930-c01f-11e5-bdbc-a94980e8de8d">
@@ -404,6 +406,40 @@
 		<edge additional_input="False" id="90f4aa10-c0c2-11e5-9162-a94980e8de8d">
 			<start_node id="63c5beb0-c03d-11e5-9fdb-a94980e8de8d"/>
 			<end_node id="90f4aa0f-c0c2-11e5-bca3-a94980e8de8d"/>
+			<input data="" method_name="" method_node="" parameters="False"/>
+			<output data="" method_name="" parameters="False"/>
+			<preconditions/>
+			<performance think_time="1.0" url="http://" weight="1.0">
+				<request>
+					<method value="GET"/>
+					<content_type value="text/html"/>
+					<parameters/>
+				</request>
+			</performance>
+			<set_guard key="" value=""/>
+			<check_guard key="" value=""/>
+			<epics/>
+		</edge>
+		<edge additional_input="False" id="07bfa41e-c59f-11e5-ac9f-2c600cd4c6d7">
+			<start_node id="110f70e1-c041-11e5-8414-a94980e8de8d"/>
+			<end_node id="07bf7d0f-c59f-11e5-8e9d-2c600cd4c6d7"/>
+			<input data="" method_name="" method_node="" parameters="False"/>
+			<output data="" method_name="" parameters="False"/>
+			<preconditions/>
+			<performance think_time="1.0" url="http://" weight="1.0">
+				<request>
+					<method value="GET"/>
+					<content_type value="text/html"/>
+					<parameters/>
+				</request>
+			</performance>
+			<set_guard key="" value=""/>
+			<check_guard key="" value=""/>
+			<epics/>
+		</edge>
+		<edge additional_input="False" id="b18e8770-c5a2-11e5-922c-2c600cd4c6d7">
+			<start_node id="07bf7d0f-c59f-11e5-8e9d-2c600cd4c6d7"/>
+			<end_node id="b18e6061-c5a2-11e5-897e-2c600cd4c6d7"/>
 			<input data="" method_name="" method_node="" parameters="False"/>
 			<output data="" method_name="" parameters="False"/>
 			<preconditions/>

@@ -8,7 +8,7 @@ from time import sleep
 
 class Open_application(CommonUtils):
     # Pagemodel timestamp: 20160121110718
-    # Pagemodel url: http://finndeco.codemen.fi/build/?api=K3JK2FCG
+    # Pagemodel url: http://finndeco.codemen.fi/manage/
     # Pagemodel area: Full screen
     # Pagemodel screen resolution: (1920, 1080)
     # Use project settings: True

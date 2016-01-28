@@ -61,31 +61,35 @@ class Valinta_kork_ja_lev(CommonUtils):
         # valitaan korkeus 1
         CUSTOM_ELEMENT_K1 = (By.CSS_SELECTOR, '.selectable-value-' + parameters[u'korkeus1'] + '>.inner-num')
         self.click(CUSTOM_ELEMENT_K1)
-        sleep(1)
+        sleep(2)
         # valitaan korkeus 2
         CUSTOM_ELEMENT_KORK2 = (By.CSS_SELECTOR, ".selectable-value-" + parameters[u'korkeus2'] + ">.inner-num")
         self.click(CUSTOM_ELEMENT_KORK2)
         # valitaan korkeus 3
-        sleep(1)
+        sleep(2)
         CUSTOM_ELEMENT_KORK3 = (By.CSS_SELECTOR, '.selectable-value-' + parameters[u'korkeus3'] + '>.inner-num')
         self.click(CUSTOM_ELEMENT_KORK3)
         # valitaan korkeus 4
-        sleep(1)
+        sleep(2)
         CUSTOM_ELEMENT_KORK4 = (By.CSS_SELECTOR,  '.selectable-value-' + parameters[u'korkeus4'] + '>.inner-num')
         self.click(CUSTOM_ELEMENT_KORK4)
-        sleep(1)
+        sleep(2)
         # valitaan leveys 1
         CUSTOM_ELEMENT_LEV1 = (By.CSS_SELECTOR,  '.selectable-value-' + parameters[u'leveys1'] + '>.inner-num')
         self.click(CUSTOM_ELEMENT_LEV1)
+        sleep(2)
         # valitaan leveys 2
         CUSTOM_ELEMENT_LEV2 = (By.CSS_SELECTOR,'.selectable-value-' + parameters[u'leveys2'] + '>.inner-num')
         self.click(CUSTOM_ELEMENT_LEV2)
+        sleep(2)
         # valitaan leveys 3
         CUSTOM_ELEMENT_LEV3 = (By.CSS_SELECTOR, '.selectable-value-' + parameters[u'leveys3'] + '>.inner-num')
         self.click(CUSTOM_ELEMENT_LEV3)
+        sleep(2)
         # valitaan leveys 4
         CUSTOM_ELEMENT_LEV4 = (By.CSS_SELECTOR, '.selectable-value-' + parameters[u'leveys4'] + '>.inner-num')
         self.click(CUSTOM_ELEMENT_LEV4)
+        sleep(2)
 
     def click_seuraava_vaihe(self):
         self.click(self.ELEMENT_ENABLE_SEURAAVA_VAIHE)
