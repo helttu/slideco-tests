@@ -121,26 +121,11 @@ Sisäänkirjaudu Slideco Management System
     Open Browser                        ${url_sms}    ${browser}
     Maximize Browser Window
     Set Selenium Speed                  ${selenium_speed}
-    Input Text      name=login          ${user}
-    Input Text      name=password       ${pwd}
+    Input Text      					name=login          ${user}
+    Input Text      					name=password       ${pwd}
     Click Element                       css=button.btn.btn-default
-    Wait Until Element Is Visible       link=Finland Division Dashboard    timeout=30s
+    Wait Until Element Is Visible       link=Track orders    timeout=30s
 
-Mene Finland Division Dashboardiin
-	Click Element    					link=Finland Division Dashboard
-	Wait Until Element Is Visible   	link=List Orders »
-
-Klikkaa List Orders, Syötä Reference/Customer name ja Tarkista Tiedot
-	Click Element    	   				link=List Orders »
-	Wait Until Element Is Visible       //div[@id='retailer-content-floated']/div/div/div/div[3]/div/div[3]/div/input    timeout=30s
-	Input Text   						//div[@id='retailer-content-floated']/div/div/div/div[3]/div/div[3]/div/input   Testiryhmä2
-	Wait Until Page Contains   			€1621.66    timeout=30s
-	Wait Until Page Contains   			Unconfirmed     timeout=30s
-	Wait Until Page Contains   			Draft      timeout=30s
-
-Uloskirjaudu
-	Click Element                       css=span.glyphicon.glyphicon-log-out
-	Wait Until Page Contains    		You have just been logged out    timeout=10s
 
 
 
