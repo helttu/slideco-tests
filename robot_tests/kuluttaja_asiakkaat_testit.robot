@@ -18,4 +18,5 @@ Suunnitelman Tekeminen Ja Tallennus
     Lisää, Poista Tai Säädä Jakolistoja Mielesi Mukaan Ja Klikkaa Seuraava Vaihe
     Valitse Materiaalit Ja Klikkaa Seuraava Vaihe
     Tallenna Suunnitelma Ja Lähetä
+    # TODO: Ota tiedot talteem
     [Teardown]    Close Browser
