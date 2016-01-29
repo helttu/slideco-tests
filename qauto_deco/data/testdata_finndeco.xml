@@ -3,13 +3,8 @@
 	<testcase name="ovimallit">
 		<parameter name="ovimalli" pagemodel="ovimallit" value="ovi_pysty_2"/>
 	</testcase>
-	<testcase name="profiili_materiaalit">
-		<parameter name="s200_materiaalit" value="hopea"/>
-		<parameter name="s100_materiaalit" value="hopea"/>
-		<parameter name="a101_materiaalit" value="hopea"/>
-		<parameter name="a102_materiaalit" value="hopea"/>
-		<parameter name="a103_materiaalit" value="hopea"/>
-		<parameter name="a104_materiaalit" value="hopea"/>
+	<testcase name="runkoosat">
+		<parameter name="kattolevy" pagemodel="runkoosat" value="true"/>
 	</testcase>
 	<testcase name="liukuovi_profiili">
 		<parameter name="profiili" pagemodel="liukovet_profiili" value="s100"/>
@@ -21,8 +16,9 @@
 		<parameter name="full_name" pagemodel="hinta_ja_laheta" value="Testiautomaation"/>
 		<parameter name="email" pagemodel="hinta_ja_laheta" value="qfa@q-factory.fi"/>
 	</testcase>
-	<testcase name="runkoosat">
-		<parameter name="kattolevy" pagemodel="runkoosat" value="true"/>
+	<testcase name="kauppias_login">
+		<parameter name="pwd" pagemodel="kauppias_login" value="FinnDSami#9"/>
+		<parameter name="user" pagemodel="kauppias_login" value="sami.stedt@q-factory.fi"/>
 	</testcase>
 	<testcase name="korkeus_ja_leveys">
 		<parameter name="leveys1" pagemodel="korkeus_leveys" value="1"/>
@@ -33,6 +29,14 @@
 		<parameter name="korkeus2" pagemodel="korkeus_leveys" value="5"/>
 		<parameter name="korkeus3" pagemodel="korkeus_leveys" value="0"/>
 		<parameter name="korkeus4" pagemodel="korkeus_leveys" value="0"/>
+	</testcase>
+	<testcase name="profiili_materiaalit">
+		<parameter name="s200_materiaalit" value="hopea"/>
+		<parameter name="s100_materiaalit" value="hopea"/>
+		<parameter name="a101_materiaalit" value="hopea"/>
+		<parameter name="a102_materiaalit" value="hopea"/>
+		<parameter name="a103_materiaalit" value="hopea"/>
+		<parameter name="a104_materiaalit" value="hopea"/>
 	</testcase>
 	<testcase name="pintamateriaalit">
 		<parameter name="pintamateriaali" pagemodel="pintamateriaalit" value="maalatut lasit"/>
