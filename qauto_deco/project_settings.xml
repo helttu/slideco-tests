@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings>
+	<filters/>
+	<css_deep value="9"/>
+	<minimize_css value="True"/>
+	<canvas_modeling value="False"/>
+	<css_pattern pattern="" use="False"/>
+	<allow_non_unique_css_pattern value="False"/>
+	<pm_template template_string="" use="False"/>
+	<testability template_string="" use="False"/>
+	<table_filters element_count="140" row_count="25" use="True"/>
+	<big_element_filter height="40" width="55"/>
+	<contains_in_xpath value="True"/>
+	<default_area height="690" use="True" width="1600" x="0" y="0"/>
+	<no_filtered_tags>
+		<tag name="button"/>
+		<tag name="strong"/>
+		<tag name="select"/>
+	</no_filtered_tags>
+</settings>

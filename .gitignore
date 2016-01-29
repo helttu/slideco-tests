@@ -1,0 +1,5 @@
+*.py[co]
+*.zip
+generator*.png
+*.old2
+*.old
