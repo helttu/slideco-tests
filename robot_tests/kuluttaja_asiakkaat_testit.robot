@@ -1,5 +1,5 @@
 *** Settings ***
-Resource          common_resource.robot
+Resource          ../robot_resources/common_resource.robot
 
 *** Test Cases ***
 Suunnitelman Tekeminen Ja Tallennus
