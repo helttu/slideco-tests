@@ -6,6 +6,7 @@ ${browser}        	    chrome
 ${selenium_speed}       0.25
 ${url_wd}   			http://finndeco.codemen.fi/build/?api=K3JK2FCG
 ${url_sms}   			http://finndeco.codemen.fi/manage/
+${ref_cust_name}   		Testiautomaatio
 
 *** Keywords ***
 Avaa Wardrobe Builder
@@ -126,6 +127,18 @@ Sisäänkirjaudu Slideco Management System
     Click Element                       css=button.btn.btn-default
     Wait Until Element Is Visible       link=Track orders    timeout=30s
 
+Klikkaa Track Orders
+	Click Element  						link=Track orders
+	Wait Until Element Is Visible       //div[3]/div/input    timeout=30s
+
+Syötä Customer Name Ja Tarkista Tulokset
+	[Arguments]     					${ref_cust_name}
+	Input Text   						//div[3]/div/input    	${ref_cust_name}
+	Wait Until Element Is Visible  		//div[4]/select         timeout=30s
+	# Creator
+	Select From List   					//div[4]/select    		Customer
+	Wait Until Page Contains   			Testiautomaatio    		timeout=30s
+	Wait Until Page Contains   			€549.00    				timeout=30s
 
 
 
