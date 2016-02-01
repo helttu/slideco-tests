@@ -32,6 +32,17 @@ class Track_orders_test_set(BaseTest):
         # valitse Track orders
         self.kauppias_account.klikkaa_track_orders()
         # syötä Customer name
-        self.track_orders.syota_customer_name(u'Testiautomaatio')
-        # todo: verifiointi tähän
-        self.track_orders.tarkista_details_painike()
+        self.track_orders.type_ref_cust_name(self.parameters[u'track_orders'][u'ref_cust_name'])
+        # tarkista order
+        self.track_orders.wait_for_visible_reg_kodin_terra_jkl_linkki()
+
+    def test_search_orders_by_filters(self):
+        self.open_application.open_application_url(u'http://finndeco.codemen.fi/manage/')
+        # syötä username ja password
+        self.kauppias_login.syota_userid(self.parameters[u'kauppias_login'][u'user'])
+        self.kauppias_login.syota_pwd(self.parameters[u'kauppias_login'][u'pwd'])
+        # klikkaa Login-painiketta
+        self.kauppias_login.klikkaa_login_painiketta()
+        # valitse Track orders
+        self.kauppias_account.klikkaa_track_orders()
+        #
