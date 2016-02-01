@@ -9,6 +9,7 @@ from pagemodel.kauppias_account import Kauppias_account
 from pagemodel.track_orders import Track_orders
 
 class Track_orders_test_set(BaseTest):
+    parameters = get_all_parameters()
     common_utils = CommonUtils()
     open_application = Open_application()
     kauppias_login = Kauppias_login()
@@ -24,8 +25,8 @@ class Track_orders_test_set(BaseTest):
     def test_search_by_cust_name_or_by_ref_number(self):
         self.open_application.open_application_url(u'http://finndeco.codemen.fi/manage/')
         # syötä username ja password
-        self.kauppias_login.syota_username(u'sami.stedt@q-factory.fi')
-        self.kauppias_login.syota_password(u'FinnDSami#9')
+        self.kauppias_login.syota_userid(self.parameters[u'kauppias_login'][u'user'])
+        self.kauppias_login.syota_pwd(self.parameters[u'kauppias_login'][u'pwd'])
         # klikkaa Login-painiketta
         self.kauppias_login.klikkaa_login_painiketta()
         # valitse Track orders
@@ -33,3 +34,4 @@ class Track_orders_test_set(BaseTest):
         # syötä Customer name
         self.track_orders.syota_customer_name(u'Testiautomaatio')
         # todo: verifiointi tähän
+        self.track_orders.tarkista_details_painike()

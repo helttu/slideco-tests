@@ -49,3 +49,9 @@ class Kauppias_login(CommonUtils):
 
     def klikkaa_login_painiketta(self):
         self.click(self.CLASS_BTN_DEFAULT)
+
+    def syota_userid(self, parameters=None):
+        self.type(self.ID_EMBER607, parameters)
+
+    def syota_pwd(self, parameters=None):
+        self.type(self.ID_EMBER609, parameters)

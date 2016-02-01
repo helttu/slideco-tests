@@ -73,7 +73,6 @@ class Track_orders(CommonUtils):
     CLASS_GLYPHICON_COG = (By.CLASS_NAME, u'glyphicon-cog') # x: 32 y: 418 width: 14 height: 14
     EMBER18627_GLYPHICON_BRIEFCASE = (By.CSS_SELECTOR, u'#ember18627>.glyphicon-briefcase') # x: 1223 y: 451 width: 14 height: 14
     RETAILER_SIDEBAR = (By.CSS_SELECTOR, u'#retailer-sidebar>hr') # x: 0 y: 464 width: 260 height: 2
-    ID_EMBER18631 = (By.ID, u'ember18631') # x: 1303 y: 464 width: 70 height: 30
     GDL_ORDER_354_BTN_GROUP_DANGER_DELETE = (By.CSS_SELECTOR, u'#gdl_order_354>td>.btn-group>.btn-danger') # x: 1405 y: 464 width: 58 height: 30
     ALT_AKU_HULKKONEN = (By.CSS_SELECTOR, u'.img[alt="Aku Hulkkonen"]') # x: 1169 y: 467 width: 24 height: 24
     GDL_ORDER_354_TEXT_UNREAD = (By.CSS_SELECTOR, u'#gdl_order_354>td.text-center>.unread') # x: 1041 y: 471 width: 6 height: 16
@@ -216,3 +215,6 @@ class Track_orders(CommonUtils):
 
     def syota_customer_name(self, parameters=None):
         self.type(self.ID_EMBER1317, parameters)
+
+    def tarkista_details_painike(self):
+        self.wait_for_visible(self.ID_EMBER18631)
