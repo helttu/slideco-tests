@@ -216,3 +216,6 @@ class Track_orders(CommonUtils):
 
     def syota_customer_name(self, parameters=None):
         self.type(self.ID_EMBER1317, parameters)
+
+    def tarkista_details_painike(self):
+        self.wait_for_visible(self.ID_EMBER18631)
