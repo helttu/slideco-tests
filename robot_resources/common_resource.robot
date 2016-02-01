@@ -6,7 +6,6 @@ ${browser}        	    chrome
 ${selenium_speed}       0.25
 ${url_wd}   			http://finndeco.codemen.fi/build/?api=K3JK2FCG
 ${url_sms}   			http://finndeco.codemen.fi/manage/
-${ref_cust_name}   		Testiautomaatio
 
 *** Keywords ***
 Avaa Wardrobe Builder
@@ -136,6 +135,16 @@ Valitse Creator Ja Tarkista Tulokset
 	[Arguments]     						${creator}    ${customer}
 	Select From List   			    	//div[4]/select    	${creator}
 	Wait Until Page Contains  			${customer}    timeout=30s
+
+Klikkaa Descending Ja Tarkista Pvm
+	[Arguments]     					${created_desc}
+	Click Element   					//button[2]
+	Wait Until Page Contains    		${created_desc}
+
+Klikkaa Ascending Ja Tarkista Pvm
+	[Arguments]     					${created_asc}
+	Click Element   					//span/button
+	Wait Until Page Contains    		${created_asc}
 
 
 
