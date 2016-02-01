@@ -77,9 +77,20 @@ class Track_orders(CommonUtils):
     total_549_e = (By.XPATH, u'//span[contains(text(),"€549.00")]')     # x: 697 y: 472 width: 56 height: 18 # Dynamic object
     reg_kodin_terra_jkl = (By.XPATH, u'//td[9]/a')     # x: 1223 y: 453 width: 73 height: 56 # Dynamic object
     ref_cust_name = (By.XPATH, u'//div[3]/div/input')     # x: 413 y: 287 width: 180 height: 34 # Dynamic object
+    descending = (By.XPATH, u'//button[2]')     # x: 1329 y: 352 width: 89 height: 30 # Dynamic object
+    ascending = (By.XPATH, u'//span/button')     # x: 1251 y: 352 width: 80 height: 30 # Dynamic object
 
     def wait_for_visible_reg_kodin_terra_jkl_linkki(self):
         self.wait_for_visible(self.reg_kodin_terra_jkl)
 
     def type_ref_cust_name(self, parameters=None):
         self.type(self.ref_cust_name, parameters)
+
+    def click_descending(self):
+        self.click(self.descending)
+
+    def click_ascending(self):
+        self.click(self.ascending)
+
+    def wait_for_visible_ascending(self):
+        self.wait_for_visible(self.ascending)
