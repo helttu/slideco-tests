@@ -110,13 +110,6 @@ Tallenna Suunnitelma Ja Lähetä
 	# Jaa tämä sivu, email
 	Wait Until Element Is Visible  		//*[@id='section-sidebar_storage']/div/div[7]/div/div[2]/button[1]    timeout=30s
 
-
-
-
-
-
-# Tästä alkaa Slideco Management System keywordit
-
 Sisäänkirjaudu Slideco Management System
     [Arguments]     					${user}    ${pwd}
     Open Browser                        ${url_sms}    ${browser}
@@ -132,13 +125,18 @@ Klikkaa Track Orders
 	Wait Until Element Is Visible       //div[3]/div/input    timeout=30s
 
 Syötä Customer Name Ja Tarkista Tulokset
-	[Arguments]     					${ref_cust_name}
+	[Arguments]     					${ref_cust_name}    ${total}
 	Input Text   						//div[3]/div/input    	${ref_cust_name}
 	Wait Until Element Is Visible  		//div[4]/select         timeout=30s
 	# Creator
 	Select From List   					//div[4]/select    		Customer
-	Wait Until Page Contains   			Testiautomaatio    		timeout=30s
-	Wait Until Page Contains   			€549.00    				timeout=30s
+	Wait Until Page Contains   			${total}   				timeout=30s
+
+Valitse Creator Ja Tarkista Tulokset
+	[Arguments]     						${creator}    ${customer}
+	Select From List   			    	//div[4]/select    	${creator}
+	Wait Until Page Contains  			${customer}    timeout=30s
+
 
 
 
