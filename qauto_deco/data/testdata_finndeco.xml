@@ -42,4 +42,7 @@
 		<parameter name="pintamateriaali" pagemodel="pintamateriaalit" value="maalatut lasit"/>
 		<parameter name="pintamateriaali_vaihtoehdot" pagemodel="pintamateriaalit" value="cappucino"/>
 	</testcase>
+	<testcase name="runkosavy">
+		<parameter name="runkosavy" pagemodel="runkosavy" value="valkea"/>
+	</testcase>
 </testset>
