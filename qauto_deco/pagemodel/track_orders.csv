@@ -47,3 +47,4 @@ ref_cust_name,By.XPATH,//div[3]/div/input,413,287,180,34
 descending,By.XPATH,//button[2],1329,352,89,30
 ascending,By.XPATH,//span/button,1251,352,80,30
 5_days_ago,By.XPATH,//BODY/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[1]/DIV[4]/TABLE[1]/TBODY[1]/TR[1]/TD[2],423,319,80,66
+creator_list,By.XPATH,//div[4]/select,1042,352,180,34

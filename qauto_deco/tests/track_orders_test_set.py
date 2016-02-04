@@ -41,12 +41,28 @@ class Track_orders_test_set(BaseTest):
         # syötä username ja password
         self.kauppias_login.syota_userid(self.parameters[u'kauppias_login'][u'user'])
         self.kauppias_login.syota_pwd(self.parameters[u'kauppias_login'][u'pwd'])
-        # klikkaa Login-painiketta
+        # klikkaa login-painiketta
         self.kauppias_login.klikkaa_login_painiketta()
-        # valitse Track orders
+        # valitse track orders
         self.kauppias_account.klikkaa_track_orders()
         # klikkaa descending
         self.track_orders.click_descending()
         self.track_orders.wait_for_visible_ascending()
+        # todo: lisää verifiointi
+
         # klikkaa ascending
         self.track_orders.click_ascending()
+
+        # todo: lisää verifiointi
+
+    def test_search_orders_by_filters(self):
+        self.open_application.open_application_url(u'http://finndeco.codemen.fi/manage/')
+        # syötä username ja password
+        self.kauppias_login.syota_userid(self.parameters[u'kauppias_login'][u'user'])
+        self.kauppias_login.syota_pwd(self.parameters[u'kauppias_login'][u'pwd'])
+        # klikkaa login-painiketta
+        self.kauppias_login.klikkaa_login_painiketta()
+        # valitse track orders
+        self.kauppias_account.klikkaa_track_orders()
+        # valitse creator
+        self.track_orders.click_creator_list()

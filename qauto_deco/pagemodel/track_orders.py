@@ -79,6 +79,8 @@ class Track_orders(CommonUtils):
     ref_cust_name = (By.XPATH, u'//div[3]/div/input')     # x: 413 y: 287 width: 180 height: 34 # Dynamic object
     descending = (By.XPATH, u'//button[2]')     # x: 1329 y: 352 width: 89 height: 30 # Dynamic object
     ascending = (By.XPATH, u'//span/button')     # x: 1251 y: 352 width: 80 height: 30 # Dynamic object
+    creator_list = (By.XPATH, u'//div[4]/select')     # x: 1042 y: 352 width: 180 height: 34 # Dynamic object
+
 
     def wait_for_visible_reg_kodin_terra_jkl_linkki(self):
         self.wait_for_visible(self.reg_kodin_terra_jkl)
@@ -94,3 +96,12 @@ class Track_orders(CommonUtils):
 
     def wait_for_visible_ascending(self):
         self.wait_for_visible(self.ascending)
+
+    def select_text_from_dropdown_list_creator_list(self, parameters=None):
+        self.select_text_from_dropdown_list(self.creator_list, parameters)
+
+    def select_value_from_dropdown_list_creator_list(self, parameters=None):
+        self.select_value_from_dropdown_list(self.creator_list, parameters)
+
+    def click_creator_list(self):
+        self.click(self.creator_list)
