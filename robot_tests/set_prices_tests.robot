@@ -11,7 +11,7 @@ Don't Allow String Values
     [Teardown]    Close Browser
 
 Don't Allow Empty Values
-    [Tags]  kehitys
+    [Tags]  valmis
     Sisäänkirjaudu Slideco Management System        sami.stedt@q-factory.fi    FinnDSami#9
     Klikkaa Set Prices
     Syötä Merkkijono VAT Multiplier Kenttään        \

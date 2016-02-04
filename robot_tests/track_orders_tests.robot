@@ -3,21 +3,21 @@ Resource          ../robot_resources/common_resource.robot
 
 *** Test Cases ***
 Search By Customer Name Or By Reference Number
-    [Tags]  kehitys
+    [Tags]  valmis
     Sisäänkirjaudu Slideco Management System        sami.stedt@q-factory.fi    FinnDSami#9
     Klikkaa Track Orders
     Syötä Customer Name Ja Tarkista 				Testiautomaatio    €549.00
     [Teardown]    Close Browser
 
 Search Orders By Filters
-	[Tags]  kehitys
+	[Tags]  valmis
     Sisäänkirjaudu Slideco Management System        sami.stedt@q-factory.fi    FinnDSami#9
     Klikkaa Track Orders
     Valitse Creator Ja Tarkista 					Customer    Sanna Salmio Jyväskylä    €715.79
     [Teardown]    Close Browser
 
 Sort Orders By Date
-    [Tags]  kehitys
+    [Tags]  valmis
     Sisäänkirjaudu Slideco Management System        sami.stedt@q-factory.fi    FinnDSami#9
     Klikkaa Track Orders
     Valitse Descending Ja Tarkista                  a day ago

@@ -10,7 +10,7 @@ List Retailers
     [Teardown]    Close Browser
 
 Head Retailer Shorcuts
-    [Tags]  kehitys
+    [Tags]  valmis
     Sisäänkirjaudu Slideco Management System        sami.stedt@q-factory.fi    FinnDSami#9
     Klikkaa Retailers
     Klikkaa Edit ja Tarkista Tiedot                 Kosti testaa
