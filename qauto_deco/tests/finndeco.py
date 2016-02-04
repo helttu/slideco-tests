@@ -18,6 +18,9 @@ from pagemodel.pintamateriaalit import Pintamateriaalit
 from pagemodel.maalatut_lasit import Maalatut_lasit
 from pagemodel.hinta_ja_laheta import Hinta_ja_laheta
 from pagemodel.kehasavy import Kehasavy
+from pagemodel.huomio_popup import Huomio_popup
+from pagemodel.taustalevyt import Taustalevyt
+from pagemodel.runkosavy import Runkosavy
 
 class Finndeco(BaseTest):
     parameters = get_all_parameters()
@@ -37,6 +40,9 @@ class Finndeco(BaseTest):
     maalatut_lasit = Maalatut_lasit()
     hinta_ja_laheta = Hinta_ja_laheta()
     kehasavy = Kehasavy()
+    huomio_popup = Huomio_popup()
+    taustalevyt = Taustalevyt()
+    runkosavy = Runkosavy()
 
     def setUp(self):
         pass
@@ -69,5 +75,9 @@ class Finndeco(BaseTest):
         self.pintamateriaalit.valitse_pintamateriaalit(self.parameters[u'pintamateriaalit'])
         self.maalatut_lasit.valitse_pintamateriaali_vaihtoehto(self.parameters[u'pintamateriaalit'])
         self.pintamateriaalit.click_seuraava_vaihe()
+        self.huomio_popup.click_jatka()
+        self.taustalevyt.click_seuraava_vaihe()
+        self.runkosavy.select_runkosavy(self.parameters[u'runkosavy'])
+        self.runkosavy.click_seuraava_vaihe()
         self.hinta_ja_laheta.syota_yhteystiedot_ja_tallenna(self.parameters[u'yhteystiedot'])
         sleep(5)

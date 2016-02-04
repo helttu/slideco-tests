@@ -42,7 +42,12 @@
 		<parameter name="pintamateriaali" pagemodel="pintamateriaalit" value="maalatut lasit"/>
 		<parameter name="pintamateriaali_vaihtoehdot" pagemodel="pintamateriaalit" value="cappucino"/>
 	</testcase>
+<<<<<<< HEAD
 	<testcase name="track_orders">
 		<parameter name="ref_cust_name" pagemodel="track_orders" value="Testiautomaatio"/>
+=======
+	<testcase name="runkosavy">
+		<parameter name="runkosavy" pagemodel="runkosavy" value="valkea"/>
+>>>>>>> 238cb814bff28a062433d8118c4d0b07aaba26b6
 	</testcase>
 </testset>
