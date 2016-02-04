@@ -281,7 +281,6 @@ Valitse Language
 Syötä Share Message
 	[Arguments]     					${message}
 	Input Text   						//textarea    ${message}
->>>>>>> 238cb814bff28a062433d8118c4d0b07aaba26b6
 
 
 
