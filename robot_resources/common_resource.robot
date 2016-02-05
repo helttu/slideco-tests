@@ -51,10 +51,10 @@ Valitse Mieleisesi Profiilisävy Ja Klikkaa Seuraava Vaihe
 	Wait Until Element Is Visible   	//section[@id='section-progress_navigation']/div[5]/span    timeout=30s
 	# Seuraava vaihe
 	Click Element     					//section[@id='section-progress_navigation']/div[5]/span
-	Wait Until Element Is Visible   	//section[@id='section-progress_navigation']/div[5]/span    timeout=30s
+	Wait Until Element Is Visible   	//*[@id='section-sidebar_profiles']/div[2]/div[3]/div[2]/div[2]/div    timeout=30s
 
 Valitse Liukuoven Hidastimet Ja Klikkaa Seuraava Vaihe
-	Wait Until Page Contains 			Tähän profiiliin ei saa hidastinta    timeout=30s
+	Click Element 						//*[@id='section-sidebar_profiles']/div[2]/div[3]/div[2]/div[2]/div
 	Wait Until Element Is Visible   	//section[@id='section-progress_navigation']/div[5]/span    timeout=30s
 	# Seuraava vaihe
 	Click Element    					//section[@id='section-progress_navigation']/div[5]/span
@@ -89,31 +89,74 @@ Lisää, Poista Tai Säädä Jakolistoja Mielesi Mukaan Ja Klikkaa Seuraava Vaih
 	Wait Until Element Is Visible     	//section[@id='section-sidebar_materials']/div[2]/div/div[2]/div[2]/div[3]    timeout=30s
 
 Valitse Materiaalit Ja Klikkaa Seuraava Vaihe
-	Click Element    //section[@id='section-sidebar_materials']/div[2]/div/div[2]/div[2]/div[3]
+	# Peilit
+	Click Element    					//section[@id='section-sidebar_materials']/div[2]/div/div[2]/div[2]/div[3]
 	Wait Until Element Is Visible    	css=img[alt="panelmaterial_finland_kirkas_peili"]    timeout=30s
+	# Kirkas peili
 	Click Element     					css=img[alt="panelmaterial_finland_kirkas_peili"]
+	Wait Until Element Is Visible  		//section[@id='section-progress_navigation']/div[5]/span
+	# Seuraava vaihe
+	Click Element  						//section[@id='section-progress_navigation']/div[5]/span
+	Wait Until Element Is Visible  		//*[@id='furniture-prompt']/div[2]/button    timeout=30s
+	# huom! popup
+	Click Element   					//*[@id='furniture-prompt']/div[2]/button
 	Wait Until Element Is Visible  		//section[@id='section-progress_navigation']/div[5]/span    timeout=30s
 	Click Element    					//section[@id='section-progress_navigation']/div[5]/span
-	Wait Until Element Is Visible    	css=button[type="submit"]    timeout=30s
+	Wait Until Element Is Visible  		//*[@id='section-sidebar_furniture']/div[2]/div[2]/div[2]/div[3]/div[1]    timeout=30s
+
+Valitse Runkosävy
+	# Harmaa
+	Click Element  						//*[@id='section-sidebar_furniture']/div[2]/div[2]/div[2]/div[3]/div[1]
+	Wait Until Element Is Visible  		//section[@id='section-progress_navigation']/div[5]/span    timeout=30s
+	Click Element    					//section[@id='section-progress_navigation']/div[5]/span
+	Wait Until Element Is Visible 		//section[@id='section-progress_navigation']/div[5]/span    timeout=30s
+
+Mihin Käytät Vaatekaappiasi Kysymys 1/2
+	# Eteinen
+	Click Element  						//*[@id='section-sidebar_questionaire']/div/div/div[1]/div[2]/div[3]/div[1]/div/div[2]
+	Wait Until Element Is Visible  		//section[@id='section-progress_navigation']/div[5]/span    timeout=30s
+	Click Element    					//section[@id='section-progress_navigation']/div[5]/span
+	Wait Until Element Is Visible  		//section[@id='section-progress_navigation']/div[5]/span    timeout=30s
+
+Kenen Makuuhuone Kysymys 2/2
+	# Perhe
+	Click Element   					//*[@id='q-user']/div[2]/div[1]/div[1]/div/div[1]
+	Wait Until Element Is Visible  		//section[@id='section-progress_navigation']/div[5]/span    timeout=30s
+	Click Element    					//section[@id='section-progress_navigation']/div[5]/span
+	Wait Until Element Is Visible  		css=div.design-icon.shoe    timeout=30s
+
+Valitse Mieleisesi Malli Suunnitelmasi Pohjaksi
+	# Olen hulluna kenkiin
+	Click Element  						css=div.design-icon.shoe
+	Wait Until Element Is Visible  		//section[@id='section-progress_navigation']/div[5]/span    timeout=30s
+	Click Element    					//section[@id='section-progress_navigation']/div[5]/span
+	Wait Until Element Is Visible    	//section[@id='section-progress_navigation']/div[5]/span    timeout=30s
+
+Klikkaa Seurava Vaihe Huoneen Kuva Sivulla
+	Click Element  						//section[@id='section-progress_navigation']/div[5]/span
+	Wait Until Element Is Visible  		css=button[type="submit"]    								timeout=30s
 
 Tallenna Suunnitelma Ja Lähetä
 	Click Element    					css=button[type="submit"]
 	Wait Until Element Is Visible   	name=full_name    				timeout=30s
-	Input Text  						name=full_name    				Testiautomaatio
+	# Nimi ja asuinpaikka
+	Input Text  						name=full_name    				Testiautomaatio Helsinki
 	Wait Until Element Is Visible   	name=email    					timeout=30s
+	# Sähköposti
 	Input Text  						name=email    					sami.stedt@q-factory.fi
 	Wait Until Element Is Visible   	css=button[type="submit"]    	timeout=30s
 	Click Element   					css=button[type="submit"]
-	Wait Until Element Is Visible   	css=button[type="submit"]    	timeout=30s
-	Click Element   					css=button[type="submit"]
-	# Jaa tämä sivu, email
-	Wait Until Element Is Visible  		//*[@id='section-sidebar_storage']/div/div[7]/div/div[2]/button[1]    timeout=30s
+	Wait Until Element Is Visible   	//*[@id='section-sidebar_storage']/div/div[4]/form/div[2]/span[1]    timeout=30s
+	${koodi_1}=   						Get Text    //*[@id='section-sidebar_storage']/div/div[4]/form/div[2]/span[1]
+	Set Global Variable    				${koodi_1}
+	${koodi_2}=  						Get Text    //*[@id='section-sidebar_storage']/div/div[4]/form/div[2]/span[2]
+	Set Global Variable    				${koodi_2}
+	${koodi_3}=							Get Text    //*[@id='section-sidebar_storage']/div/div[4]/form/div[2]/span[3]
+	Set Global Variable    				${koodi_3}
+	${koodi_4}=  						Get Text    //*[@id='section-sidebar_storage']/div/div[4]/form/div[2]/span[4]
+	Set Global Variable    				${koodi_4}
 
-<<<<<<< HEAD
-=======
-# Tästä alkaa Slideco Management System keywordit
-
->>>>>>> 238cb814bff28a062433d8118c4d0b07aaba26b6
+# Tästä alkaa Kauppias Keywordit
 Sisäänkirjaudu Slideco Management System
     [Arguments]     					${user}    ${pwd}
     Open Browser                        ${url_sms}    ${browser}
@@ -128,7 +171,6 @@ Klikkaa Track Orders
 	Click Element  						link=Track orders
 	Wait Until Element Is Visible       //div[3]/div/input    timeout=30s
 
-<<<<<<< HEAD
 Syötä Customer Name Ja Tarkista Tulokset
 	[Arguments]     					${ref_cust_name}    ${total}
 	Input Text   						//div[3]/div/input    	${ref_cust_name}
@@ -152,7 +194,6 @@ Klikkaa Ascending Ja Tarkista Pvm
 	Click Element   					//span/button
 	Wait Until Page Contains    		${created_asc}
 
-=======
 Klikkaa Retailers
 	Click Element   					link=Retailers
 	Wait Until Element Is Visible   	//td[2]/button    timeout=30s
