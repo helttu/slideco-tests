@@ -17,6 +17,10 @@ Suunnitelman Tekeminen Ja Tallennus
     Valitse Mieleisesi Ovimalli Tästä Ja Klikkaa Seuraava Vaihe
     Lisää, Poista Tai Säädä Jakolistoja Mielesi Mukaan Ja Klikkaa Seuraava Vaihe
     Valitse Materiaalit Ja Klikkaa Seuraava Vaihe
+    Valitse Runkosävy
+    Mihin Käytät Vaatekaappiasi Kysymys 1/2
+    Kenen Makuuhuone Kysymys 2/2
+    Valitse Mieleisesi Malli Suunnitelmasi Pohjaksi
+    Klikkaa Seurava Vaihe Huoneen Kuva Sivulla
     Tallenna Suunnitelma Ja Lähetä
-    # TODO: Ota tiedot talteem
     [Teardown]    Close Browser
