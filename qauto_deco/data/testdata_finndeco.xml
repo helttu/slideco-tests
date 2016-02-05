@@ -30,6 +30,9 @@
 		<parameter name="korkeus3" pagemodel="korkeus_leveys" value="0"/>
 		<parameter name="korkeus4" pagemodel="korkeus_leveys" value="0"/>
 	</testcase>
+	<testcase name="runkosavy">
+		<parameter name="runkosavy" pagemodel="runkosavy" value="valkea"/>
+	</testcase>
 	<testcase name="profiili_materiaalit">
 		<parameter name="s200_materiaalit" value="hopea"/>
 		<parameter name="s100_materiaalit" value="hopea"/>
@@ -41,10 +44,5 @@
 	<testcase name="pintamateriaalit">
 		<parameter name="pintamateriaali" pagemodel="pintamateriaalit" value="maalatut lasit"/>
 		<parameter name="pintamateriaali_vaihtoehdot" pagemodel="pintamateriaalit" value="cappucino"/>
-	</testcase>
-	<testcase name="track_orders">
-		<parameter name="ref_cust_name" pagemodel="track_orders" value="Testiautomaatio"/>
-	<testcase name="runkosavy">
-		<parameter name="runkosavy" pagemodel="runkosavy" value="valkea"/>
 	</testcase>
 </testset>
