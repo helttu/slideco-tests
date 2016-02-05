@@ -75,33 +75,35 @@ class Track_orders(CommonUtils):
     # Dynamic objects:
     BODY = (By.XPATH, u'//BODY/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[1]/DIV[4]/TABLE[1]/TBODY[1]/TR[1]/TD[10]/DIV[1]/A[1]')     # x: 1303 y: 129 width: 71 height: 30 # Dynamic object
     total_549_e = (By.XPATH, u'//span[contains(text(),"€549.00")]')     # x: 697 y: 472 width: 56 height: 18 # Dynamic object
-    reg_kodin_terra_jkl = (By.XPATH, u'//td[9]/a')     # x: 1223 y: 453 width: 73 height: 56 # Dynamic object
-    ref_cust_name = (By.XPATH, u'//div[3]/div/input')     # x: 413 y: 287 width: 180 height: 34 # Dynamic object
-    descending = (By.XPATH, u'//button[2]')     # x: 1329 y: 352 width: 89 height: 30 # Dynamic object
-    ascending = (By.XPATH, u'//span/button')     # x: 1251 y: 352 width: 80 height: 30 # Dynamic object
-    creator_list = (By.XPATH, u'//div[4]/select')     # x: 1042 y: 352 width: 180 height: 34 # Dynamic object
-
+    REG_KODIN_TERRA_JKL = (By.XPATH, u'//td[9]/a')     # x: 1223 y: 453 width: 73 height: 56 # Dynamic object
+    REF_CUST_NAME = (By.XPATH, u'//div[3]/div/input')     # x: 413 y: 287 width: 180 height: 34 # Dynamic object
+    DESCENDING = (By.XPATH, u'//button[2]')     # x: 1329 y: 352 width: 89 height: 30 # Dynamic object
+    ASCENDING = (By.XPATH, u'//span/button')     # x: 1251 y: 352 width: 80 height: 30 # Dynamic object
+    CREATOR_LIST = (By.XPATH, u'//div[4]/select')     # x: 1042 y: 352 width: 180 height: 34 # Dynamic object
 
     def wait_for_visible_reg_kodin_terra_jkl_linkki(self):
-        self.wait_for_visible(self.reg_kodin_terra_jkl)
+        self.wait_for_visible(self.REG_KODIN_TERRA_JKL)
 
     def type_ref_cust_name(self, parameters=None):
-        self.type(self.ref_cust_name, parameters)
+        self.type(self.REF_CUST_NAME, parameters)
 
     def click_descending(self):
-        self.click(self.descending)
+        self.click(self.DESCENDING)
 
     def click_ascending(self):
-        self.click(self.ascending)
+        self.click(self.ASCENDING)
 
     def wait_for_visible_ascending(self):
-        self.wait_for_visible(self.ascending)
+        self.wait_for_visible(self.ASCENDING)
 
     def select_text_from_dropdown_list_creator_list(self, parameters=None):
-        self.select_text_from_dropdown_list(self.creator_list, parameters)
+        self.select_text_from_dropdown_list(self.CREATOR_LIST, parameters)
 
     def select_value_from_dropdown_list_creator_list(self, parameters=None):
-        self.select_value_from_dropdown_list(self.creator_list, parameters)
+        self.select_value_from_dropdown_list(self.CREATOR_LIST, parameters)
 
-    def click_creator_list(self):
-        self.click(self.creator_list)
+    def type_customer_name(self, parameters=None):
+        self.type(self.REF_CUST_NAME, parameters[u'cust_name'])
+
+    def select_customer_from_creator_list(self, parameters=None):
+        self.select_text_from_dropdown_list(self.CREATOR_LIST, parameters[u'creator_list'])

@@ -12,6 +12,10 @@
 	<testcase name="ovet">
 		<parameter name="ovien_maara" pagemodel="valitse_ovien_maara" value="2"/>
 	</testcase>
+	<testcase name="track_orders">
+		<parameter name="cust_name" pagemodel="track_orders" value="testiautomaatio"/>
+		<parameter name="creator_list" pagemodel="track_orders" value="Customer"/>
+	</testcase>
 	<testcase name="yhteystiedot">
 		<parameter name="full_name" pagemodel="hinta_ja_laheta" value="Testiautomaation"/>
 		<parameter name="email" pagemodel="hinta_ja_laheta" value="qfa@q-factory.fi"/>

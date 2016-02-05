@@ -42,9 +42,9 @@ ID_RETAILER_CONTENT_FLOATED,By.XPATH,id(\'retailer-content-floated\')/DIV[1]/DIV
 CONTAINS_TEXT,By.XPATH,//span[contains(text()@@@"«")],321,639,8,16
 BODY,By.XPATH,"//BODY/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[1]/DIV[4]/TABLE[1]/TBODY[1]/TR[1]/TD[10]/DIV[1]/A[1]",1303,129,71,30
 total_549_e,By.XPATH,"//span[contains(text(),"€549.00")]",697,472,56,18
-reg_kodin_terra_jkl,By.XPATH,//td[9]/a,1223,453,73,56
-ref_cust_name,By.XPATH,//div[3]/div/input,413,287,180,34
-descending,By.XPATH,//button[2],1329,352,89,30
-ascending,By.XPATH,//span/button,1251,352,80,30
+REG_KODIN_TERRA_JKL,By.XPATH,//td[9]/a,1223,453,73,56
+REF_CUST_NAME,By.XPATH,//div[3]/div/input,413,287,180,34
+DESCENDING,By.XPATH,//button[2],1329,352,89,30
+ASCENDING,By.XPATH,//span/button,1251,352,80,30
 5_days_ago,By.XPATH,//BODY/DIV[1]/DIV[3]/DIV[1]/DIV[1]/DIV[1]/DIV[3]/DIV[1]/DIV[4]/TABLE[1]/TBODY[1]/TR[1]/TD[2],423,319,80,66
-creator_list,By.XPATH,//div[4]/select,1042,352,180,34
+CREATOR_LIST,By.XPATH,//div[4]/select,1042,352,180,34
