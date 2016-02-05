@@ -26,4 +26,5 @@ ID_EMBER4089,By.ID,ember4089,707,608,430,34
 ID_EMBER4090,By.ID,ember4090,707,682,430,34
 ID_EMBER4091,By.ID,ember4091,707,756,430,34
 set_prices_link,By.LINK_TEXT,Set prices,0,336,260,36
-vat_multiplier_field,By.XPATH,//div[@id='retailer-content-floated']/div/div/div/div[2]/div/div/input,707,229,430,34
+VAT_MULTIPLIER_FIELD,By.XPATH,//div[@id='retailer-content-floated']/div/div/div/div[2]/div/div/input,707,229,430,34
+SET_PRICES_LINK,By.LINK_TEXT,Set prices,0,336,260,36

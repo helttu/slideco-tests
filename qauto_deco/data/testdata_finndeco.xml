@@ -49,4 +49,7 @@
 		<parameter name="pintamateriaali" pagemodel="pintamateriaalit" value="maalatut lasit"/>
 		<parameter name="pintamateriaali_vaihtoehdot" pagemodel="pintamateriaalit" value="cappucino"/>
 	</testcase>
+	<testcase name="set_prices">
+		<parameter name="vat_multiplier" pagemodel="set_prices" value="twenty-three"/>
+	</testcase>
 </testset>
