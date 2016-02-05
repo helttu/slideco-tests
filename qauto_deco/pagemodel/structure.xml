@@ -32,6 +32,7 @@
 		<node id="63b998ee-c8bd-11e5-800d-00247e035201" pagemodel="taustalevyt"/>
 		<node id="b40472c0-c8be-11e5-96b7-00247e035201" pagemodel="runkosavy"/>
 		<node id="0cae42b0-cb4f-11e5-b87d-2c600cd4c6d7" pagemodel="set_prices"/>
+		<node id="b3b8e58f-cc05-11e5-80ea-2c600cd4c6d7" pagemodel="retailers"/>
 	</nodes>
 	<edges>
 		<edge additional_input="False" id="fc549930-c01f-11e5-bdbc-a94980e8de8d">
@@ -527,8 +528,25 @@
 			<check_guard key="" value=""/>
 			<epics/>
 		</edge>
-		<edge additional_input="False" id="0cae42b1-cb4f-11e5-a345-2c600cd4c6d7">
-			<start_node id="f0ffb0ee-c66a-11e5-830b-2c600cd4c6d7"/>
+		<edge additional_input="False" id="452f3561-cc06-11e5-b6e7-2c600cd4c6d7">
+			<start_node id="07bf7d0f-c59f-11e5-8e9d-2c600cd4c6d7"/>
+			<end_node id="b3b8e58f-cc05-11e5-80ea-2c600cd4c6d7"/>
+			<input data="" method_name="" method_node="" parameters="False"/>
+			<output data="" method_name="" parameters="False"/>
+			<preconditions/>
+			<performance think_time="1.0" url="http://" weight="1.0">
+				<request>
+					<method value="GET"/>
+					<content_type value="text/html"/>
+					<parameters/>
+				</request>
+			</performance>
+			<set_guard key="" value=""/>
+			<check_guard key="" value=""/>
+			<epics/>
+		</edge>
+		<edge additional_input="False" id="4f354770-cc06-11e5-a75f-2c600cd4c6d7">
+			<start_node id="07bf7d0f-c59f-11e5-8e9d-2c600cd4c6d7"/>
 			<end_node id="0cae42b0-cb4f-11e5-b87d-2c600cd4c6d7"/>
 			<input data="" method_name="" method_node="" parameters="False"/>
 			<output data="" method_name="" parameters="False"/>

@@ -5,12 +5,16 @@ from webframework.extension.util.common_utils import *
 from time import sleep
 from pagemodel.open_application import Open_application
 from pagemodel.set_prices import Set_prices
+from pagemodel.retailers import Retailers
+from pagemodel.kauppias_login import Kauppias_login
 
 class Retailers(BaseTest):
     parameters = get_all_parameters()
     common_utils = CommonUtils()
     open_application = Open_application()
     set_prices = Set_prices()
+    retailers = Retailers()
+    kauppias_login = Kauppias_login()
 
     def setUp(self):
         pass
@@ -26,4 +30,4 @@ class Retailers(BaseTest):
         # klikkaa login-painiketta
         self.kauppias_login.klikkaa_login_painiketta()
         # valitse retailers
-        self.set_prices.click_set_prices_link()
+        self.retailers.click_retailers_link()
