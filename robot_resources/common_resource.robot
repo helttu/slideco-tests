@@ -120,9 +120,7 @@ Mihin Käytät Vaatekaappiasi Kysymys 1/2
 
 Kenen Makuuhuone Kysymys 2/2
 	# Perhe
-	${elem} = 	Get WebElement 				//div[4]/div/div/div
-	Sleep   							3s
-	Click Element 						${elem}
+	Click Element   					//div[4]/div/div/div
 	Wait Until Element Is Visible  		//section[@id='section-progress_navigation']/div[5]/span    timeout=30s
 	Click Element    					//section[@id='section-progress_navigation']/div[5]/span
 	Wait Until Element Is Visible  		//div[@id='q-refine']/div[2]/div[2]/div[4]/div    timeout=30s
@@ -166,7 +164,7 @@ Sisäänkirjaudu Slideco Management System
     Set Selenium Speed                  ${selenium_speed}
     Input Text      					name=login          		${user}
     Input Text      					name=password       		${pwd}
-    Click Element                       css=button.btn.btn-default
+    Click Element                       //*[@id='login-panel']/form/button
     Wait Until Element Is Visible       link=Track orders    		timeout=30s
 
 Klikkaa Track Orders
@@ -293,7 +291,7 @@ Syötä Merkkijono VAT Multiplier Kenttään
 	Input Text   						//div[@id='retailer-content-floated']/div/div/div/div[2]/div/div/input    ${string}
 
 Tarkista Että Merkkijonoa Ei Hyväksytä
-	Wait Until Page Does Not Contain   	Retailer updated    timeout=30s
+	Page Should Not Contain  			Retailer updated
 
 Klikkaa Create New Application
 	Click Element  						//td[2]/button
