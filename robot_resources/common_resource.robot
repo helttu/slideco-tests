@@ -173,6 +173,10 @@ Klikkaa Track Orders
 	Click Element  						link=Track orders
 	Wait Until Element Is Visible       //div[3]/div/input    timeout=30s
 
+Klikkaa REG Kodin Terra Jyväskylä Dashboard
+	Click Element  						link=REG Kodin Terra Jyväskylä Dashboard
+	Wait Until Element Is Visible  		link=List Orders »    timeout=30s
+
 Klikkaa See Variations
 	Click Element 						link=See Variations »
 	Wait Until Page Contains  			Door profiles    timeout=30s
