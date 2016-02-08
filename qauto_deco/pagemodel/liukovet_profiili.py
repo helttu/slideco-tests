@@ -58,19 +58,19 @@ class Liukovet_profiili(CommonUtils):
 
     def valitse_liukuoviprofiili(self, parameters=None):
         if parameters['profiili'] == "s200":
-            self.click(self.ALT_S200)
+            self.click_element(self.ALT_S200)
         elif parameters['profiili'] == "s100":
-             self.click(self.ALT_S100)
+             self.click_element(self.ALT_S100)
         elif parameters['profiili'] == "a101":
-             self.click(self.ALT_A101)
+             self.click_element(self.ALT_A101)
         elif parameters['profiili']== "a102":
-             self.click(self.ALT_A102)
+             self.click_element(self.ALT_A102)
         elif parameters['profiili'] == "a103":
-             self.click(self.ALT_A103)
+             self.click_element(self.ALT_A103)
         elif parameters['profiili'] == "a104":
-             self.click(self.ALT_A104)
+             self.click_element(self.ALT_A104)
         else:
-            self.click(self.ALT_S200)
+            self.click_element(self.ALT_S200)
 
     def click_seuraava_vaihe(self):
-        self.click(self.ELEMENT_ENABLE_SEURAAVA_VAIHE)
+        self.click_element(self.ELEMENT_ENABLE_SEURAAVA_VAIHE)

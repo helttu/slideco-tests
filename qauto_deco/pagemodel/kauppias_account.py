@@ -85,6 +85,5 @@ class Kauppias_account(CommonUtils):
     # Dynamic objects:
     TRACK_ORDERS = (By.LINK_TEXT, u'Track orders')     # x: 0 y: 192 width: 260 height: 36 # Dynamic object
 
-
     def klikkaa_track_orders(self):
-        self.click(self.TRACK_ORDERS)
+        self.click_element(self.TRACK_ORDERS)

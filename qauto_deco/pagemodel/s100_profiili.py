@@ -48,12 +48,12 @@ class S100_profiili(CommonUtils):
 
     def valitse_profiili_materiaali(self, parameters=None):
         if parameters[u's100_materiaalit'] == u'wenge':
-            self.click(self.ALT_PANELPROFILE_WENGE)
+            self.click_element(self.ALT_PANELPROFILE_WENGE)
         elif parameters[u's100_materiaalit'] == u'tammi':
-            self.click(self.ALT_PANELPROFILE_OAK)
+            self.click_element(self.ALT_PANELPROFILE_OAK)
         elif parameters[u's100_materiaalit'] == u'pähkinä':
-            self.click(self.ALT_PANELPROFILE_WALNUT)
+            self.click_element(self.ALT_PANELPROFILE_WALNUT)
         elif parameters[u's100_materiaalit'] == u'pyökki':
-            self.click(self.ALT_PANELPROFILE_BEECH)
+            self.click_element(self.ALT_PANELPROFILE_BEECH)
         else:
-            self.click(self.ALT_PANELPROFILE_WENGE)
+            self.click_element(self.ALT_PANELPROFILE_WENGE)

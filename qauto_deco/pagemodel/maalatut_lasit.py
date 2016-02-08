@@ -45,4 +45,4 @@ class Maalatut_lasit(CommonUtils):
 
     def valitse_pintamateriaali_vaihtoehto(self, parameters=None):
         if parameters['pintamateriaali_vaihtoehdot'] == "cappucino":
-            self.click(self.ALT_PANELMATERIAL_PREMIUM_CAPPUCCINO)
+            self.click_element(self.ALT_PANELMATERIAL_PREMIUM_CAPPUCCINO)

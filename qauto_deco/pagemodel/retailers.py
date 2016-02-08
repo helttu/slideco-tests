@@ -131,6 +131,5 @@ class Retailers(CommonUtils):
     # Dynamic objects:
     RETAILERS_LINK = (By.LINK_TEXT, u'Retailers')     # x: 0 y: 300 width: 260 height: 36 # Dynamic object
 
-
     def click_retailers_link(self):
-        self.click(self.RETAILERS_LINK)
+        self.click_element(self.RETAILERS_LINK)

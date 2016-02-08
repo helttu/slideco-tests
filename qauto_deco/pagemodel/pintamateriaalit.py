@@ -45,7 +45,7 @@ class Pintamateriaalit(CommonUtils):
 
     def valitse_pintamateriaalit(self, parameters=None):
         if parameters['pintamateriaali'] == "maalatut lasit":
-            self.click(self.STYLE_MULTITHUMB_TWO_THUMB)
+            self.click_element(self.STYLE_MULTITHUMB_TWO_THUMB)
 
     def click_seuraava_vaihe(self):
-        self.click(self.ELEMENT_ENABLE_SEURAAVA_VAIHE)
+        self.click_element(self.ELEMENT_ENABLE_SEURAAVA_VAIHE)

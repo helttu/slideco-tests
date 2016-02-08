@@ -53,7 +53,5 @@ class Ala_palkki(CommonUtils):
     SAVE_CRUMB_THREEWAY_LINE_1 = (By.CSS_SELECTOR, u'.section-save>.section-crumb-threeway>.line-1') # x: 1173 y: 761 width: 160 height: 1
     SAVE_CRUMB_THREEWAY_LINE_2 = (By.CSS_SELECTOR, u'.section-save>.section-crumb-threeway>.line-2') # x: 1333 y: 761 width: 160 height: 1
 
-
-
     def wait_for_visible_measure_title_mittaa_ja_rakenna(self):
-        self.wait_for_visible(self.MEASURE_TITLE_MITTAA_JA_RAKENNA)
+        self.wait_until_element_is_visible(self.MEASURE_TITLE_MITTAA_JA_RAKENNA)

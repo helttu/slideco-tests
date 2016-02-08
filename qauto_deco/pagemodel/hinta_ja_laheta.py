@@ -50,6 +50,6 @@ class Hinta_ja_laheta(CommonUtils):
     CLASS_PRICE = (By.CLASS_NAME, u'price') # x: 1190 y: 639 width: 52 height: 22
 
     def syota_yhteystiedot_ja_tallenna(self, parameters=None):
-        self.type(self.NAME_FULL, parameters[u'full_name'])
-        self.type(self.NAME_EMAIL, parameters[u'email'])
-        #self.click(self.STORAGE_BLOCK_ITEM_REGISTER_TALLENNA_JA_SAAT_KOMEROKOODIN)
+        self.input_text(self.NAME_FULL, parameters[u'full_name'])
+        self.input_text(self.NAME_EMAIL, parameters[u'email'])
+        #self.click_element(self.STORAGE_BLOCK_ITEM_REGISTER_TALLENNA_JA_SAAT_KOMEROKOODIN)

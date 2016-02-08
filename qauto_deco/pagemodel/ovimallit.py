@@ -48,7 +48,7 @@ class Ovimallit(CommonUtils):
 
     def valitse_ovimalli(self, parameters=None):
         if parameters['ovimalli'] == "ovi_pysty_2":
-            self.click(self.OVI_PYSTY_KAKSI)
+            self.click_element(self.OVI_PYSTY_KAKSI)
 
     def click_seuraava_vaihe(self, parameters=None):
-        self.click(self.ELEMENT_ENABLE_SEURAAVA_VAIHE)
+        self.click_element(self.ELEMENT_ENABLE_SEURAAVA_VAIHE)

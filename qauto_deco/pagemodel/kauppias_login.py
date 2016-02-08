@@ -39,19 +39,17 @@ class Kauppias_login(CommonUtils):
     CLASS_BTN_DEFAULT = (By.CLASS_NAME, u'btn-default') # x: 750 y: 529 width: 100 height: 34
     CLASS_GLYPHICON_LOG_IN = (By.CLASS_NAME, u'glyphicon-log-in') # x: 793 y: 538 width: 14 height: 14
 
-
-
     def syota_username(self, parameters=None):
-        self.type(self.ID_EMBER607, parameters)
+        self.input_text(self.ID_EMBER607, parameters)
 
     def syota_password(self, parameters=None):
-        self.type(self.ID_EMBER609, parameters)
+        self.input_text(self.ID_EMBER609, parameters)
 
     def klikkaa_login_painiketta(self):
-        self.click(self.CLASS_BTN_DEFAULT)
+        self.click_element(self.CLASS_BTN_DEFAULT)
 
     def syota_userid(self, parameters=None):
-        self.type(self.ID_EMBER607, parameters)
+        self.input_text(self.ID_EMBER607, parameters)
 
     def syota_pwd(self, parameters=None):
-        self.type(self.ID_EMBER609, parameters)
+        self.input_text(self.ID_EMBER609, parameters)

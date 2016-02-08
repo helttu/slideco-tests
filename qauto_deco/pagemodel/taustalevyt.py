@@ -37,4 +37,4 @@ class Taustalevyt(CommonUtils):
     CLASS_ELEMENT_ENABLE = (By.CLASS_NAME, u'element-enable') # x: 1632 y: 766 width: 288 height: 68
 
     def click_seuraava_vaihe(self, parameters=None):
-        self.click(self.CLASS_ELEMENT_ENABLE)
+        self.click_element(self.CLASS_ELEMENT_ENABLE)

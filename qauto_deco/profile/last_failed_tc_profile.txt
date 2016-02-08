@@ -1,1 +1,1 @@
-Retailers.test_list_retailers=1
+Finndeco.test_suunnittelu_liukuovet=1

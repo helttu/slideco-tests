@@ -62,15 +62,14 @@ class Set_prices(CommonUtils):
     VAT_MULTIPLIER_FIELD = (By.XPATH, u'//div[@id="retailer-content-floated"]/div/div/div/div[2]/div/div/input')     # x: 707 y: 229 width: 430 height: 34 # Dynamic object
     SET_PRICES_LINK = (By.LINK_TEXT, u'Set prices')     # x: 0 y: 336 width: 260 height: 36 # Dynamic object
 
-
     def click_set_prices_link(self):
         self.click(self.set_prices_link)
+
+    def click_set_prices_link(self):
+        self.click_element(self.SET_PRICES_LINK)
 
     def type_string_to_vat_multiplier_field(self, parameters=None):
         self.type(self.ID_EMBER4085, parameters)
 
     def type_string_to_vat_multiplier_field(self, parameters=None):
-        self.type(self.VAT_MULTIPLIER_FIELD, parameters)
-
-    def click_set_prices_link(self):
-        self.click(self.SET_PRICES_LINK)
+        self.input_text(self.VAT_MULTIPLIER_FIELD, parameters)

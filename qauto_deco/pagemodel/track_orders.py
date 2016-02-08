@@ -82,19 +82,19 @@ class Track_orders(CommonUtils):
     CREATOR_LIST = (By.XPATH, u'//div[4]/select')     # x: 1042 y: 352 width: 180 height: 34 # Dynamic object
 
     def wait_for_visible_reg_kodin_terra_jkl_linkki(self):
-        self.wait_for_visible(self.REG_KODIN_TERRA_JKL)
+        self.wait_until_element_is_visible(self.REG_KODIN_TERRA_JKL)
 
     def type_ref_cust_name(self, parameters=None):
-        self.type(self.REF_CUST_NAME, parameters)
+        self.input_text(self.REF_CUST_NAME, parameters)
 
     def click_descending(self):
-        self.click(self.DESCENDING)
+        self.click_element(self.DESCENDING)
 
     def click_ascending(self):
-        self.click(self.ASCENDING)
+        self.click_element(self.ASCENDING)
 
     def wait_for_visible_ascending(self):
-        self.wait_for_visible(self.ASCENDING)
+        self.wait_until_element_is_visible(self.ASCENDING)
 
     def select_text_from_dropdown_list_creator_list(self, parameters=None):
         self.select_text_from_dropdown_list(self.CREATOR_LIST, parameters)
@@ -103,7 +103,7 @@ class Track_orders(CommonUtils):
         self.select_value_from_dropdown_list(self.CREATOR_LIST, parameters)
 
     def type_customer_name(self, parameters=None):
-        self.type(self.REF_CUST_NAME, parameters[u'cust_name'])
+        self.input_text(self.REF_CUST_NAME, parameters[u'cust_name'])
 
     def select_customer_from_creator_list(self, parameters=None):
         self.select_text_from_dropdown_list(self.CREATOR_LIST, parameters[u'creator_list'])

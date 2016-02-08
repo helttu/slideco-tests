@@ -34,4 +34,4 @@ class Huomio_popup(CommonUtils):
     MSG_JATKA = (By.CSS_SELECTOR, u'.msg>button') # x: 840 y: 529 width: 240 height: 48
 
     def click_jatka(self, parameters=None):
-        self.click(self.MSG_JATKA)
+        self.click_element(self.MSG_JATKA)
