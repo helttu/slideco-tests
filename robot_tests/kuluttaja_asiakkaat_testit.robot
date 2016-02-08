@@ -2,7 +2,7 @@
 Resource          ../robot_resources/common_resource.robot
 
 *** Test Cases ***
-Suunnitelman Tekeminen Ja Tallennus
+Suunnitelman Tekeminen Ja Komerokoodin Tallennus
     [Tags]  kehitys
     Avaa Wardrobe Builder
     Klikkaa Aloita Suunnittelu Painiketta
