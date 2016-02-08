@@ -160,14 +160,14 @@ Tallenna Suunnitelma, Lähetä Ja Ota Komerokoodi Talteen
 
 # Tästä alkaa Kauppias Keywordit
 Sisäänkirjaudu Slideco Management System
-    [Arguments]     					${user}    ${pwd}
-    Open Browser                        ${url_sms}    ${browser}
+    [Arguments]     					${user}    					${pwd}
+    Open Browser                        ${url_sms}    				${browser}
     Maximize Browser Window
     Set Selenium Speed                  ${selenium_speed}
-    Input Text      					name=login          ${user}
-    Input Text      					name=password       ${pwd}
+    Input Text      					name=login          		${user}
+    Input Text      					name=password       		${pwd}
     Click Element                       css=button.btn.btn-default
-    Wait Until Element Is Visible       link=Track orders    timeout=30s
+    Wait Until Element Is Visible       link=Track orders    		timeout=30s
 
 Klikkaa Track Orders
 	Click Element  						link=Track orders
