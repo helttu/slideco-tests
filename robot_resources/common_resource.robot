@@ -173,6 +173,16 @@ Klikkaa Track Orders
 	Click Element  						link=Track orders
 	Wait Until Element Is Visible       //div[3]/div/input    timeout=30s
 
+Klikkaa See Variations
+	Click Element 						link=See Variations »
+	Wait Until Page Contains  			Door profiles    timeout=30s
+	Wait Until Page Contains  			Material    timeout=30s
+	Wait Until Page Contains  			Outer wooden frames    timeout=30s
+	Wait Until Page Contains  			Interiors    timeout=30s
+	Wait Until Page Contains  			Horizontal Bars    timeout=30s
+	Wait Until Page Contains  			Soft Close    timeout=30s
+	Wait Until Page Contains  			Extras    timeout=30s
+
 Syötä Customer Name Ja Tarkista Tulokset
 	[Arguments]     					${ref_cust_name}    ${total}
 	Input Text   						//div[3]/div/input    	${ref_cust_name}
@@ -200,6 +210,10 @@ Klikkaa Retailers
 	Click Element   					link=Retailers
 	Wait Until Element Is Visible   	//td[2]/button    timeout=30s
 
+Klikkaa My Account
+	Click Element  						link=My Account »
+	Wait Until Element Is Visible  		//a[contains(text(),'REG Kodin Terra Jyväskylä')]    timeout=30s
+
 Klikkaa Managers
 	Click Element  						link=Managers
 	Wait Until Element Is Visible  		//td[2]/button    timeout=30s
@@ -211,6 +225,7 @@ Klikkaa Set Prices
 Klikkaa Configure Applications
 	Click Element   					link=Configure applications
 	Wait Until Element Is Visible   	//td[2]/button
+	Wait Until Page Contains  			7 / 40 applications in use    timeout=30s
 
 Syötä Customer Name Ja Tarkista
 	[Arguments]     					${customer_name}    ${total}
