@@ -2,7 +2,7 @@
 Library           Selenium2Library
 
 *** Variables ***
-${browser}        	    chrome
+${browser}        	    firefox
 ${selenium_speed}       0.25
 ${url_wd}   			http://finndeco.codemen.fi/build/?api=K3JK2FCG
 ${url_sms}   			http://finndeco.codemen.fi/manage/
@@ -113,21 +113,23 @@ Valitse Runkosävy
 
 Mihin Käytät Vaatekaappiasi Kysymys 1/2
 	# Eteinen
-	Click Element  						//*[@id='section-sidebar_questionaire']/div/div/div[1]/div[2]/div[3]/div[1]/div/div[2]
+	Click Element  						//section[@id='section-sidebar_questionaire']/div/div/div/div[2]/div[3]/div/div/div[2]
 	Wait Until Element Is Visible  		//section[@id='section-progress_navigation']/div[5]/span    timeout=30s
 	Click Element    					//section[@id='section-progress_navigation']/div[5]/span
 	Wait Until Element Is Visible  		//section[@id='section-progress_navigation']/div[5]/span    timeout=30s
 
 Kenen Makuuhuone Kysymys 2/2
 	# Perhe
-	Click Element   					//*[@id='q-user']/div[2]/div[1]/div[1]/div/div[1]
+	${elem} = 	Get WebElement 				//div[4]/div/div/div
+	Sleep   							3s
+	Click Element 						${elem}
 	Wait Until Element Is Visible  		//section[@id='section-progress_navigation']/div[5]/span    timeout=30s
 	Click Element    					//section[@id='section-progress_navigation']/div[5]/span
-	Wait Until Element Is Visible  		css=div.design-icon.shoe    timeout=30s
+	Wait Until Element Is Visible  		//div[@id='q-refine']/div[2]/div[2]/div[4]/div    timeout=30s
 
 Valitse Mieleisesi Malli Suunnitelmasi Pohjaksi
-	# Olen hulluna kenkiin
-	Click Element  						css=div.design-icon.shoe
+	# Mekot
+	Click Element  						//div[@id='q-refine']/div[2]/div[2]/div[4]/div
 	Wait Until Element Is Visible  		//section[@id='section-progress_navigation']/div[5]/span    timeout=30s
 	Click Element    					//section[@id='section-progress_navigation']/div[5]/span
 	Wait Until Element Is Visible    	//section[@id='section-progress_navigation']/div[5]/span    timeout=30s
@@ -136,7 +138,7 @@ Klikkaa Seurava Vaihe Huoneen Kuva Sivulla
 	Click Element  						//section[@id='section-progress_navigation']/div[5]/span
 	Wait Until Element Is Visible  		css=button[type="submit"]    								timeout=30s
 
-Tallenna Suunnitelma Ja Lähetä
+Tallenna Suunnitelma, Lähetä Ja Ota Komerokoodi Talteen
 	Click Element    					css=button[type="submit"]
 	Wait Until Element Is Visible   	name=full_name    				timeout=30s
 	# Nimi ja asuinpaikka
