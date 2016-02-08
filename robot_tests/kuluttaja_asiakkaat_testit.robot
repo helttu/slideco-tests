@@ -22,5 +22,5 @@ Suunnitelman Tekeminen Ja Tallennus
     Kenen Makuuhuone Kysymys 2/2
     Valitse Mieleisesi Malli Suunnitelmasi Pohjaksi
     Klikkaa Seurava Vaihe Huoneen Kuva Sivulla
-    Tallenna Suunnitelma Ja Lähetä
+    Tallenna Suunnitelma, Lähetä Ja Ota Komerokoodi Talteen
     [Teardown]    Close Browser
