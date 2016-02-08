@@ -50,5 +50,3 @@ Navigate To Dashboard And Open My Account Page
     Klikkaa REG Kodin Terra Jyväskylä Dashboard
     Klikkaa My Account
     [Teardown]    Close Browser
-
-
