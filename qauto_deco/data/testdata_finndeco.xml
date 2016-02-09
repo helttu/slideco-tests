@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <testset>
+	<testcase name="suunnittelumallipohja">
+		<parameter name="mallipohja" pagemodel="suunnittelumallipohja" value="musiikki"/>
+	</testcase>
 	<testcase name="ovimallit">
 		<parameter name="ovimalli" pagemodel="ovimallit" value="ovi_pysty_2"/>
 	</testcase>
@@ -43,6 +46,9 @@
 	<testcase name="runkosavy">
 		<parameter name="runkosavy" pagemodel="runkosavy" value="valkea"/>
 	</testcase>
+	<testcase name="kenen_vaatekaappi">
+		<parameter name="omistaja" pagemodel="kenen_vaatekaappi" value="mies"/>
+	</testcase>
 	<testcase name="profiili_materiaalit">
 		<parameter name="s200_materiaalit" value="hopea"/>
 		<parameter name="s100_materiaalit" value="hopea"/>
@@ -54,8 +60,5 @@
 	<testcase name="pintamateriaalit">
 		<parameter name="pintamateriaali" pagemodel="pintamateriaalit" value="maalatut lasit"/>
 		<parameter name="pintamateriaali_vaihtoehdot" pagemodel="pintamateriaalit" value="cappucino"/>
-	</testcase>
-	<testcase name="kenen_vaatekaappi">
-		<parameter name="omistaja" pagemodel="kenen_vaatekaappi" value="mies"/>
 	</testcase>
 </testset>
