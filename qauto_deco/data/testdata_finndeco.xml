@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <testset>
 	<testcase name="suunnittelumallipohja">
-		<parameter name="mallipohja" pagemodel="suunnittelumallipohja" value="musiikki"/>
+		<parameter name="mallipohja_musiikki" pagemodel="suunnittelumallipohja" value="true"/>
+		<parameter name="mallipohja_kirjat" pagemodel="suunnittelumallipohja" value="false"/>
+		<parameter name="mallipohja_takit" pagemodel="suunnittelumallipohja" value="false"/>
+		<parameter name="mallipohja_alusvaatteet" pagemodel="suunnittelumallipohja" value="false"/>
+		<parameter name="mallipohja_kotitoimisto" pagemodel="suunnittelumallipohja" value="false"/>
+		<parameter name="mallipohja_kengat" pagemodel="suunnittelumallipohja" value="false"/>
+		<parameter name="mallipohja_sekalainen" pagemodel="suunnittelumallipohja" value="false"/>
+		<parameter name="mallipohja_mekot_puvut" pagemodel="suunnittelumallipohja" value="false"/>
 	</testcase>
 	<testcase name="ovimallit">
 		<parameter name="ovimalli" pagemodel="ovimallit" value="ovi_pysty_2"/>

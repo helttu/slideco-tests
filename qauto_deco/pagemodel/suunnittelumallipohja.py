@@ -45,24 +45,22 @@ class Suunnittelumallipohja(CommonUtils):
     CLASS_ELEMENT_ENABLE = (By.CLASS_NAME, u'element-enable') # x: 1632 y: 766 width: 288 height: 68
 
     def valitse_suunnitelumallipohja(self, parameters=None):
-        if parameters['mallipohja'] == "kirjat":
+        if parameters['mallipohja_kirjat'] == "true":
             self.click_element(self.BODY_PID_N_KIRJOISTA)
-        elif parameters['mallipohja'] == "musiikki":
+        if parameters['mallipohja_musiikki'] == "true":
              self.click_element(self.BODY_PID_N_MUSIIKISTA_JA_ELOKUVISTA)
-        elif parameters['mallipohja'] == "takit":
+        if parameters['mallipohja_takit'] == "true":
              self.click_element(self.BODY_OMISTAN_PALJON_TAKKEJA)
-        elif parameters['mallipohja'] == "alusvaatteet":
+        if parameters['mallipohja_alusvaatteet'] == "true":
              self.click_element(self.BODY_PID_N_KAUNIISTA_ALUSVAATTEISTA)
-        elif parameters['mallipohja'] == "kotitoimisto":
+        if parameters['mallipohja_kotitoimisto'] == "true":
              self.click_element(self.BODY_KOTITOIMISTO_KUULUU_ARKEENI)
-        elif parameters['mallipohja'] == "kengat":
+        if parameters['mallipohja_kengat'] == "true":
              self.click_element(self.BODY_OLEN_HULLUNA_KENKIIN)
-        elif parameters['mallipohja'] == "sekalainen":
+        if parameters['mallipohja_sekalainen'] == "true":
              self.click_element(self.BODY_PALJON_SEKALAISTA_PIKKUTAVARAA)
-        elif parameters['mallipohja'] == "mekot_puvut":
+        if parameters['mallipohja_mekot_puvut'] == "true":
              self.click_element(self.BODY_MEKOT_JA_PUVUT)
-        else:
-            self.click_element(self.BODY_PID_N_MUSIIKISTA_JA_ELOKUVISTA)
 
     def click_seuraava_vaihe(self, parameters=None):
         self.click_element(self.CLASS_ELEMENT_ENABLE)
