@@ -74,3 +74,12 @@ class Set_prices(CommonUtils):
 
     def click_set_prices_link(self):
         self.click(self.SET_PRICES_LINK)
+
+    def click_element_set_prices_link(self):
+        self.click_element(self.SET_PRICES_LINK)
+
+    def wait_until_element_is_visible_vat_multiplier_field(self):
+        self.wait_until_element_is_visible(self.VAT_MULTIPLIER_FIELD)
+
+    def input_text_vat_multiplier_field(self, parameters=None):
+        self.input_text(self.VAT_MULTIPLIER_FIELD, parameters)
