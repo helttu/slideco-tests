@@ -88,3 +88,6 @@ class Kauppias_account(CommonUtils):
 
     def klikkaa_track_orders(self):
         self.click(self.TRACK_ORDERS)
+
+    def click_element_track_orders_link(self):
+        self.click_element(self.TRACK_ORDERS)

@@ -24,45 +24,39 @@ class Track_orders_test_set(BaseTest):
 
     def test_search_by_cust_name_or_by_ref_number(self):
         self.open_application.open_application_url(u'http://finndeco.codemen.fi/manage/')
-        # syötä username ja password
-        self.kauppias_login.syota_userid(self.parameters[u'kauppias_login'][u'user'])
-        self.kauppias_login.syota_pwd(self.parameters[u'kauppias_login'][u'pwd'])
-        # klikkaa Login-painiketta
-        self.kauppias_login.klikkaa_login_painiketta()
-        # valitse Track orders
-        self.kauppias_account.klikkaa_track_orders()
-        # syötä Customer name
-        self.track_orders.type_customer_name(self.parameters[u'track_orders'])
-        # tarkista order
-        self.track_orders.wait_for_visible_reg_kodin_terra_jkl_linkki()
+        # sisäänkirjautuminen
+        self.kauppias_login.input_text_username_field(self.parameters[u'kauppias_login'][u'user'])
+        self.kauppias_login.input_text_password_field(self.parameters[u'kauppias_login'][u'pwd'])
+        self.kauppias_login.click_element_login_button()
+        # track orders linkki
+        self.kauppias_account.click_element_track_orders_link()
+        # customer name
+        self.track_orders.input_text_reference_customer_name_field(self.parameters[u'track_orders'][u'cust_name'])
+        self.track_orders.wait_until_element_is_visible_kodin_terra_link()
 
     def test_sort_orders_by_date(self):
         self.open_application.open_application_url(u'http://finndeco.codemen.fi/manage/')
-        # syötä username ja password
-        self.kauppias_login.syota_userid(self.parameters[u'kauppias_login'][u'user'])
-        self.kauppias_login.syota_pwd(self.parameters[u'kauppias_login'][u'pwd'])
-        # klikkaa login-painiketta
-        self.kauppias_login.klikkaa_login_painiketta()
+        # sisäänkirjautuminen
+        self.kauppias_login.input_text_username_field(self.parameters[u'kauppias_login'][u'user'])
+        self.kauppias_login.input_text_password_field(self.parameters[u'kauppias_login'][u'pwd'])
+        self.kauppias_login.click_element_login_button()
         # valitse track orders
-        self.kauppias_account.klikkaa_track_orders()
-        # klikkaa descending
-        self.track_orders.click_descending()
-        self.track_orders.wait_for_visible_ascending()
-        # todo: lisää verifiointi, wait until page contains
-
-        # klikkaa ascending
-        self.track_orders.click_ascending()
-
-        # todo: lisää verifiointi, wait until page contains
+        self.kauppias_account.click_element_track_orders_link()
+        # descending
+        self.track_orders.click_element_descending()
+        self.track_orders.wait_until_element_is_visible_ascending()
+        # ascending
+        self.track_orders.click_element_ascending()
+        self.track_orders.wait_until_element_is_visible_kodin_terra_link()
 
     def test_search_orders_by_filters(self):
         self.open_application.open_application_url(u'http://finndeco.codemen.fi/manage/')
-        # syötä username ja password
-        self.kauppias_login.syota_userid(self.parameters[u'kauppias_login'][u'user'])
-        self.kauppias_login.syota_pwd(self.parameters[u'kauppias_login'][u'pwd'])
-        # klikkaa login-painiketta
-        self.kauppias_login.klikkaa_login_painiketta()
+        # sisäänkirjautuminen
+        self.kauppias_login.input_text_username_field(self.parameters[u'kauppias_login'][u'user'])
+        self.kauppias_login.input_text_password_field(self.parameters[u'kauppias_login'][u'pwd'])
+        self.kauppias_login.click_element_login_button()
         # valitse track orders
-        self.kauppias_account.klikkaa_track_orders()
+        self.kauppias_account.click_element_track_orders_link()
+        self.track_orders.wait_until_element_is_visible_creator_list()
         # todo: valitse creator customer listasta
-        self.track_orders.select_customer_from_creator_list(self.parameters[u'track_orders'])
+        self.track_orders.select_from_list_by_label(self.parameters[u'track_orders'][u'creator_list'])

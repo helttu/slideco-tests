@@ -80,6 +80,8 @@ class Track_orders(CommonUtils):
     DESCENDING = (By.XPATH, u'//button[2]')     # x: 1329 y: 352 width: 89 height: 30 # Dynamic object
     ASCENDING = (By.XPATH, u'//span/button')     # x: 1251 y: 352 width: 80 height: 30 # Dynamic object
     CREATOR_LIST = (By.XPATH, u'//div[4]/select')     # x: 1042 y: 352 width: 180 height: 34 # Dynamic object
+    reference_customer_name_field = (By.XPATH, u'//div[3]/div/input')     # x: 413 y: 352 width: 180 height: 34 # Dynamic object
+
 
     def wait_for_visible_reg_kodin_terra_jkl_linkki(self):
         self.wait_for_visible(self.REG_KODIN_TERRA_JKL)
@@ -107,3 +109,27 @@ class Track_orders(CommonUtils):
 
     def select_customer_from_creator_list(self, parameters=None):
         self.select_text_from_dropdown_list(self.CREATOR_LIST, parameters[u'creator_list'])
+
+    def input_text_reference_customer_name_field(self, parameters=None):
+        self.input_text(self.reference_customer_name_field, parameters)
+
+    def wait_until_element_is_visible_kodin_terra_link(self):
+        self.wait_until_element_is_visible(self.REG_KODIN_TERRA_JKL)
+
+    def select_from_list_by_value(self, parameters=None):
+        self.select_from_list_by_value(self.CREATOR_LIST, parameters)
+
+    def select_from_list_by_label(self, parameters=None):
+        self.select_from_list_by_label(self.CREATOR_LIST, parameters)
+
+    def wait_until_element_is_visible_creator_list(self):
+        self.wait_until_element_is_visible(self.CREATOR_LIST)
+
+    def click_element_descending(self):
+        self.click_element(self.DESCENDING)
+
+    def wait_until_element_is_visible_ascending(self):
+        self.wait_until_element_is_visible(self.ASCENDING)
+
+    def click_element_ascending(self):
+        self.click_element(self.ASCENDING)
