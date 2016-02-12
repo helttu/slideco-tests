@@ -134,3 +134,9 @@ class Retailers(CommonUtils):
 
     def click_retailers_link(self):
         self.click(self.RETAILERS_LINK)
+
+    def click_element_retailers_link(self):
+        self.click_element(self.RETAILERS_LINK)
+
+    def wait_until_element_is_visible_kosti_testaa_link(self):
+        self.wait_until_element_is_visible(self.ID_RETAILER_CONTENT_FLOATED_KOSTI_TESTAA)

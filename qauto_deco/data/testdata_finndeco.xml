@@ -9,11 +9,14 @@
 	<testcase name="liukuovi_profiili">
 		<parameter name="profiili" pagemodel="liukovet_profiili" value="s100"/>
 	</testcase>
+	<testcase name="set_prices">
+		<parameter name="vat_multiplier" pagemodel="set_prices" value="twenty-three"/>
+	</testcase>
 	<testcase name="ovet">
 		<parameter name="ovien_maara" pagemodel="valitse_ovien_maara" value="2"/>
 	</testcase>
 	<testcase name="track_orders">
-		<parameter name="cust_name" pagemodel="track_orders" value="testiautomaatio"/>
+		<parameter name="cust_name" pagemodel="track_orders" value="Sanna Salmio"/>
 		<parameter name="creator_list" pagemodel="track_orders" value="Customer"/>
 	</testcase>
 	<testcase name="yhteystiedot">
@@ -48,8 +51,5 @@
 	<testcase name="pintamateriaalit">
 		<parameter name="pintamateriaali" pagemodel="pintamateriaalit" value="maalatut lasit"/>
 		<parameter name="pintamateriaali_vaihtoehdot" pagemodel="pintamateriaalit" value="cappucino"/>
-	</testcase>
-	<testcase name="set_prices">
-		<parameter name="vat_multiplier" pagemodel="set_prices" value="twenty-three"/>
 	</testcase>
 </testset>

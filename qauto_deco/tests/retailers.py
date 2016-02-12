@@ -24,10 +24,11 @@ class Retailers(BaseTest):
 
     def test_list_retailers(self):
         self.open_application.open_application_url(u'http://finndeco.codemen.fi/manage/')
-        # syötä username ja password
-        self.kauppias_login.syota_userid(self.parameters[u'kauppias_login'][u'user'])
-        self.kauppias_login.syota_pwd(self.parameters[u'kauppias_login'][u'pwd'])
-        # klikkaa login-painiketta
-        self.kauppias_login.klikkaa_login_painiketta()
-        # valitse retailers
-        self.retailers.click_retailers_link()
+        # sisäänkirjautuminen
+        self.kauppias_login.input_text_username_field(self.parameters[u'kauppias_login'][u'user'])
+        self.kauppias_login.input_text_password_field(self.parameters[u'kauppias_login'][u'pwd'])
+        self.kauppias_login.click_element_login_button()
+        # retailers linkki
+        self.retailers.click_element_retailers_link()
+        # kosti testaa -linkki
+        self.retailers.wait_until_element_is_visible_kosti_testaa_link()
