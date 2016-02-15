@@ -45,3 +45,15 @@ class A101_profiili(CommonUtils):
     ELEMENT_ENABLE_SEURAAVA_VAIHE = (By.CSS_SELECTOR, u'.element-enable>span') # x: 1360 y: 637 width: 240 height: 23
     CLASS_CURRENCY = (By.CLASS_NAME, u'currency') # x: 1175 y: 639 width: 9 height: 22
     CLASS_PRICE = (By.CLASS_NAME, u'price') # x: 1190 y: 639 width: 52 height: 22
+
+    def valitse_profiili_materiaali(self, parameters=None):
+        if parameters[u'a101_materiaalit'] == u'valkea':
+            self.click_element(self.ALT_PANELPROFILE_GLOSS_WHITE_A101)
+        elif parameters[u'a101_materiaalit'] == u'harjattu_alumiini':
+            self.click_element(self.ALT_PANELPROFILE_BRUSHED_SILVER_A101)
+        elif parameters[u'a101_materiaalit'] == u'alumiini':
+            self.click_element(self.ALT_PANELPROFILE_ANODISED_SILVER_A101)
+        elif parameters[u'a101_materiaalit'] == u'shampanja':
+            self.click_element(self.ALT_PANELPROFILE_ANODISED_OLIVE_A101)
+        else:
+            self.click_element(self.ALT_PANELPROFILE_GLOSS_WHITE_A101)

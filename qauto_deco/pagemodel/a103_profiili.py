@@ -45,4 +45,14 @@ class A103_profiili(CommonUtils):
     CLASS_CURRENCY = (By.CLASS_NAME, u'currency') # x: 1175 y: 639 width: 9 height: 22
     CLASS_PRICE = (By.CLASS_NAME, u'price') # x: 1190 y: 639 width: 52 height: 22
 
-
+    def valitse_profiili_materiaali(self, parameters=None):
+        if parameters[u'a103_materiaalit'] == u'valkea':
+            self.click_element(self.ALT_PANELPROFILE_GLOSS_WHITE_A103)
+        elif parameters[u'a103_materiaalit'] == u'alumiini':
+            self.click_element(self.ALT_PANELPROFILE_ANODISED_SILVER_A103)
+        elif parameters[u'a103_materiaalit'] == u'shampanja':
+            self.click_element(self.ALT_PANELPROFILE_ANODISED_OLIVE_A103)
+        elif parameters[u'a103_materiaalit'] == u'musta':
+            self.click_element(self.ALT_PANELPROFILE_SATIN_BLACK_A103)
+        else:
+            self.click_element(self.ALT_PANELPROFILE_ANODISED_SILVER_A103)

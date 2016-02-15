@@ -58,11 +58,11 @@
 	</testcase>
 	<testcase name="profiili_materiaalit">
 		<parameter name="s200_materiaalit" value="hopea"/>
-		<parameter name="s100_materiaalit" value="hopea"/>
-		<parameter name="a101_materiaalit" value="hopea"/>
-		<parameter name="a102_materiaalit" value="hopea"/>
-		<parameter name="a103_materiaalit" value="hopea"/>
-		<parameter name="a104_materiaalit" value="hopea"/>
+		<parameter name="s100_materiaalit" value="wenge"/>
+		<parameter name="a101_materiaalit" value="valkea"/>
+		<parameter name="a102_materiaalit" value="musta"/>
+		<parameter name="a103_materiaalit" value="shampanja"/>
+		<parameter name="a104_materiaalit" value="alumiini"/>
 	</testcase>
 	<testcase name="pintamateriaalit">
 		<parameter name="pintamateriaali" pagemodel="pintamateriaalit" value="maalatut lasit"/>

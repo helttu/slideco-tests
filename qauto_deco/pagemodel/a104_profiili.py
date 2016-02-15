@@ -65,4 +65,10 @@ class A104_profiili(CommonUtils):
     SAVE_CRUMB_THREEWAY_LINE_1 = (By.CSS_SELECTOR, u'.section-save>.section-crumb-threeway>.line-1') # x: 1173 y: 761 width: 160 height: 1
     SAVE_CRUMB_THREEWAY_LINE_2 = (By.CSS_SELECTOR, u'.section-save>.section-crumb-threeway>.line-2') # x: 1333 y: 761 width: 160 height: 1
 
-
+    def valitse_profiili_materiaali(self, parameters=None):
+        if parameters[u'a104_materiaalit'] == u'valkea':
+            self.click_element(self.ALT_PANELPROFILE_GLOSS_WHITE_A104)
+        elif parameters[u'a104_materiaalit'] == u'alumiini':
+            self.click_element(self.ALT_PANELPROFILE_ANODISED_SILVER_A104)
+        else:
+            self.click_element(self.ALT_PANELPROFILE_GLOSS_WHITE_A104)
