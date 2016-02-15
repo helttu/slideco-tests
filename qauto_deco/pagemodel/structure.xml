@@ -36,6 +36,7 @@
 		<node id="6bf28ccf-cef7-11e5-96e7-00247e035201" pagemodel="vaatekaapin_sijainti"/>
 		<node id="8df6c0e1-cefb-11e5-a079-00247e035201" pagemodel="kenen_vaatekaappi"/>
 		<node id="00ff892e-cefe-11e5-b255-00247e035201" pagemodel="suunnittelumallipohja"/>
+		<node id="a8bb7bc0-d3c7-11e5-abf5-00247e035201" pagemodel="liukuoven_hidastimet_2"/>
 	</nodes>
 	<edges>
 		<edge additional_input="False" id="fc549930-c01f-11e5-bdbc-a94980e8de8d">
@@ -602,6 +603,23 @@
 		<edge additional_input="False" id="00ff892f-cefe-11e5-aa50-00247e035201">
 			<start_node id="8df6c0e1-cefb-11e5-a079-00247e035201"/>
 			<end_node id="00ff892e-cefe-11e5-b255-00247e035201"/>
+			<input data="" method_name="" method_node="" parameters="False"/>
+			<output data="" method_name="" parameters="False"/>
+			<preconditions/>
+			<performance think_time="1.0" url="http://" weight="1.0">
+				<request>
+					<method value="GET"/>
+					<content_type value="text/html"/>
+					<parameters/>
+				</request>
+			</performance>
+			<set_guard key="" value=""/>
+			<check_guard key="" value=""/>
+			<epics/>
+		</edge>
+		<edge additional_input="False" id="a8bba2d1-d3c7-11e5-a00d-00247e035201">
+			<start_node id="fa83d630-c032-11e5-9353-a94980e8de8d"/>
+			<end_node id="a8bb7bc0-d3c7-11e5-abf5-00247e035201"/>
 			<input data="" method_name="" method_node="" parameters="False"/>
 			<output data="" method_name="" parameters="False"/>
 			<preconditions/>
