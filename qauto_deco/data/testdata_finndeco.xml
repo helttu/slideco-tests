@@ -10,6 +10,9 @@
 		<parameter name="mallipohja_sekalainen" pagemodel="suunnittelumallipohja" value="false"/>
 		<parameter name="mallipohja_mekot_puvut" pagemodel="suunnittelumallipohja" value="false"/>
 	</testcase>
+	<testcase name="hidastimet">
+		<parameter name="hidastimet" pagemodel="liukuoven_hidastimet_2" value="vakio"/>
+	</testcase>
 	<testcase name="ovimallit">
 		<parameter name="ovimalli" pagemodel="ovimallit" value="ovi_pysty_2"/>
 	</testcase>
@@ -66,9 +69,6 @@
 	</testcase>
 	<testcase name="pintamateriaalit">
 		<parameter name="pintamateriaali" pagemodel="pintamateriaalit" value="maalatut lasit"/>
-		<parameter name="pintamateriaali_vaihtoehdot" pagemodel="pintamateriaalit" value="cappucino"/>
-	</testcase>
-	<testcase name="hidastimet">
-		<parameter name="hidastimet" pagemodel="liukuoven_hidastimet_2" value="vakio"/>
+		<parameter name="pintamateriaali_vaihtoehdot" pagemodel="pintamateriaalit" value="vaalea"/>
 	</testcase>
 </testset>
