@@ -3,6 +3,7 @@
 	<filters/>
 	<css_deep value="9"/>
 	<minimize_css value="True"/>
+	<automated_methods value="True"/>
 	<canvas_modeling value="False"/>
 	<css_pattern pattern="" use="False"/>
 	<allow_non_unique_css_pattern value="False"/>

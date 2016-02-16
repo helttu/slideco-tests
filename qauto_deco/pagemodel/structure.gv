@@ -36,13 +36,15 @@ _1_1_1_1_1_1_7_1_1_1_1_6_1_1
 _1_1_1_1_1_1_7_1_1_1_1_6_1_1_1
 _1_1_1_1_1_1_7_1_1_1_1_6_1_1_1_1
 _1_1_1_1_1_1_8
+_1_1_1_1_1_2
+_1_1_1_1_1_1_9
 _2[shape = "doublecircle"]
 //Transitions
 _1 -> _1_1[ label = "()/0.5", probability = "0.5", set_guard = "(u'', u'')", check_guard = "(u'', u'')", edge_id = "fc549930-c01f-11e5-bdbc-a94980e8de8d"]
 _1_1 -> _1_1_1[ label = "()/1.0", probability = "1.0", set_guard = "(u'', u'')", check_guard = "(u'', u'')", edge_id = "fe4879ee-c01f-11e5-8b18-a94980e8de8d"]
 _1_1_1 -> _1_1_1_1[ label = "()/1.0", probability = "1.0", set_guard = "(u'', u'')", check_guard = "(u'', u'')", edge_id = "ac323121-c02d-11e5-8503-a94980e8de8d"]
 _1_1_1_1 -> _1_1_1_1_1[ label = "()/1.0", probability = "1.0", set_guard = "(u'', u'')", check_guard = "(u'', u'')", edge_id = "2e873671-c02e-11e5-a260-a94980e8de8d"]
-_1_1_1_1_1 -> _1_1_1_1_1_1[ label = "()/1.0", probability = "1.0", set_guard = "(u'', u'')", check_guard = "(u'', u'')", edge_id = "fa83d631-c032-11e5-aabc-a94980e8de8d"]
+_1_1_1_1_1 -> _1_1_1_1_1_1[ label = "()/0.5", probability = "0.5", set_guard = "(u'', u'')", check_guard = "(u'', u'')", edge_id = "fa83d631-c032-11e5-aabc-a94980e8de8d"]
 _1_1_1_1_1_1 -> _1_1_1_1_1_1_1[ label = "()/0.12", probability = "0.125", set_guard = "(u'', u'')", check_guard = "(u'', u'')", edge_id = "8bbcdc9f-c038-11e5-88a6-a94980e8de8d"]
 _1_1_1_1_1_1 -> _1_1_1_1_1_1_2[ label = "()/0.12", probability = "0.125", set_guard = "(u'', u'')", check_guard = "(u'', u'')", edge_id = "e2cac7ef-c038-11e5-b7d3-a94980e8de8d"]
 _1_1_1_1_1_1 -> _1_1_1_1_1_1_3[ label = "()/0.12", probability = "0.125", set_guard = "(u'', u'')", check_guard = "(u'', u'')", edge_id = "0b82f9ae-c039-11e5-b3ff-a94980e8de8d"]
@@ -73,5 +75,7 @@ _1_1_1_1_1_1_7_1_1_1_1_6_1 -> _1_1_1_1_1_1_7_1_1_1_1_6_1_1[ label = "()/1.0", pr
 _1_1_1_1_1_1_7_1_1_1_1_6_1_1 -> _1_1_1_1_1_1_7_1_1_1_1_6_1_1_1[ label = "()/1.0", probability = "1.0", set_guard = "(u'', u'')", check_guard = "(u'', u'')", edge_id = "9f1c66de-cefb-11e5-a00b-00247e035201"]
 _1_1_1_1_1_1_7_1_1_1_1_6_1_1_1 -> _1_1_1_1_1_1_7_1_1_1_1_6_1_1_1_1[ label = "()/1.0", probability = "1.0", set_guard = "(u'', u'')", check_guard = "(u'', u'')", edge_id = "00ff892f-cefe-11e5-aa50-00247e035201"]
 _1_1_1_1_1_1 -> _1_1_1_1_1_1_8[ label = "()/0.12", probability = "0.125", set_guard = "(u'', u'')", check_guard = "(u'', u'')", edge_id = "a8bba2d1-d3c7-11e5-a00d-00247e035201"]
-_1_1_1_1_1 -> _[ label = "()/0.0", probability = "0.0", set_guard = "('', '')", check_guard = "('', '')", edge_id = "b9445cd2-d3d8-11e5-950c-00247e035201"]
+_1_1_1_1_1 -> _1_1_1_1_1_2[ label = "()/0.5", probability = "0.5", set_guard = "(u'', u'')", check_guard = "(u'', u'')", edge_id = "b9445cd2-d3d8-11e5-950c-00247e035201"]
+_1_1_1_1_1_1 -> _1_1_1_1_1_1_9[ label = "()/0.0", probability = "0.0", set_guard = "('', '')", check_guard = "('', '')", edge_id = "0ef74491-d4a0-11e5-85ea-00247e035201"]
+_1_1_1_1_1_1 -> _[ label = "()/0.0", probability = "0.0", set_guard = "('', '')", check_guard = "('', '')", edge_id = "9da8cf10-d4a0-11e5-94bd-00247e035201"]
 }
