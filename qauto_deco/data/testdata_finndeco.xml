@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <testset>
+	<testcase name="suunnittelumallipohja">
+		<parameter name="mallipohja_musiikki" pagemodel="suunnittelumallipohja" value="true"/>
+		<parameter name="mallipohja_kirjat" pagemodel="suunnittelumallipohja" value="false"/>
+		<parameter name="mallipohja_takit" pagemodel="suunnittelumallipohja" value="false"/>
+		<parameter name="mallipohja_alusvaatteet" pagemodel="suunnittelumallipohja" value="false"/>
+		<parameter name="mallipohja_kotitoimisto" pagemodel="suunnittelumallipohja" value="false"/>
+		<parameter name="mallipohja_kengat" pagemodel="suunnittelumallipohja" value="false"/>
+		<parameter name="mallipohja_sekalainen" pagemodel="suunnittelumallipohja" value="false"/>
+		<parameter name="mallipohja_mekot_puvut" pagemodel="suunnittelumallipohja" value="false"/>
+	</testcase>
+	<testcase name="hidastimet">
+		<parameter name="hidastimet" pagemodel="liukuoven_hidastimet_2" value="vakio"/>
+	</testcase>
 	<testcase name="ovimallit">
 		<parameter name="ovimalli" pagemodel="ovimallit" value="ovi_pysty_2"/>
 	</testcase>
@@ -14,6 +27,9 @@
 	</testcase>
 	<testcase name="ovet">
 		<parameter name="ovien_maara" pagemodel="valitse_ovien_maara" value="2"/>
+	</testcase>
+	<testcase name="kaapin_sijainti">
+		<parameter name="huone" pagemodel="vaatekaapin_sijainti" value="makuuhuone"/>
 	</testcase>
 	<testcase name="track_orders">
 		<parameter name="cust_name" pagemodel="track_orders" value="Sanna Salmio"/>
@@ -40,16 +56,20 @@
 	<testcase name="runkosavy">
 		<parameter name="runkosavy" pagemodel="runkosavy" value="valkea"/>
 	</testcase>
+	<testcase name="kenen_vaatekaappi">
+		<parameter name="omistaja" pagemodel="kenen_vaatekaappi" value="mies"/>
+	</testcase>
 	<testcase name="profiili_materiaalit">
 		<parameter name="s200_materiaalit" value="hopea"/>
-		<parameter name="s100_materiaalit" value="hopea"/>
-		<parameter name="a101_materiaalit" value="hopea"/>
-		<parameter name="a102_materiaalit" value="hopea"/>
-		<parameter name="a103_materiaalit" value="hopea"/>
-		<parameter name="a104_materiaalit" value="hopea"/>
+		<parameter name="s100_materiaalit" value="wenge"/>
+		<parameter name="a101_materiaalit" value="valkea"/>
+		<parameter name="a102_materiaalit" value="musta"/>
+		<parameter name="a103_materiaalit" value="shampanja"/>
+		<parameter name="a104_materiaalit" value="alumiini"/>
 	</testcase>
 	<testcase name="pintamateriaalit">
 		<parameter name="pintamateriaali" pagemodel="pintamateriaalit" value="maalatut lasit"/>
 		<parameter name="pintamateriaali_vaihtoehdot" pagemodel="pintamateriaalit" value="cappucino"/>
+		<parameter name="pintamateriaali_vaihtoehdot" pagemodel="pintamateriaalit" value="vaalea"/>
 	</testcase>
 </testset>

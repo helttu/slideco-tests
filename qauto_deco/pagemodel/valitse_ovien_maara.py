@@ -50,11 +50,11 @@ class Valitse_ovien_maara(CommonUtils):
 
     def valitse_ovien_maara(self, parameters=None):
         if parameters['ovien_maara'] == 2:
-            self.click(self.CLASS_ICON)
+            self.click_element(self.CLASS_ICON)
         elif parameters['ovien_maara'] == 3:
-            self.click(self.CLASS_STYLE_DOORCOUNT_3)
+            self.click_element(self.CLASS_STYLE_DOORCOUNT_3)
         else:
-            self.click(self.CLASS_ICON)
+            self.click_element(self.CLASS_ICON)
 
     def click_seuraava_vaihe(self):
-        self.click(self.ELEMENT_ENABLE_SEURAAVA_VAIHE)
+        self.click_element(self.ELEMENT_ENABLE_SEURAAVA_VAIHE)

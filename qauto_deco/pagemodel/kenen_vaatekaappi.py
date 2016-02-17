@@ -6,8 +6,8 @@ from webframework.extension.util.webtimings import get_measurements
 from webframework.extension.parsers.parameter_parser import get_parameter
 from time import sleep
 
-class Taustalevyt(CommonUtils):
-    # Pagemodel timestamp: 20160201102541
+class Kenen_vaatekaappi(CommonUtils):
+    # Pagemodel timestamp: 20160209090547
     # Pagemodel url: http://finndeco.codemen.fi/build/?api=K3JK2FCG
     # Pagemodel area: Full screen
     # Pagemodel screen resolution: (1920, 1080)
@@ -30,11 +30,27 @@ class Taustalevyt(CommonUtils):
     # Pagemodel type: dynamic
     # Links found: 0
     # Page model constants:
-    CONTENT_FURNITURE_BACK_PANEL_STYLE_CONTAINER_LIST_DATA_SET_SAVE = (By.CSS_SELECTOR, u'.content-furniture-back-panel>.style-container-list>div.style.data-set-save-data-bint>.selection-checked>.icon') # x: 1488 y: 151 width: 426 height: 80
-    BODY_EI = (By.XPATH, u'//BODY/SECTION[14]/DIV[2]/DIV[1]/DIV[2]/DIV[2]') # x: 1486 y: 245 width: 430 height: 84
+    CONTAINS_TEXT_KYSYMYS_2 = (By.XPATH, u'//p[contains(text(),"Kysymys 2/2")]') # x: 96 y: 90 width: 1752 height: 20
+    BODY_MIES = (By.XPATH, u'//BODY/SECTION[15]/DIV[1]/DIV[1]/DIV[2]/DIV[2]/DIV[1]') # x: 96 y: 304 width: 438 height: 428
+    BODY_NAINEN = (By.XPATH, u'//BODY/SECTION[15]/DIV[1]/DIV[1]/DIV[2]/DIV[2]/DIV[2]') # x: 534 y: 304 width: 438 height: 428
+    BODY_PARI = (By.XPATH, u'//BODY/SECTION[15]/DIV[1]/DIV[1]/DIV[2]/DIV[2]/DIV[3]') # x: 972 y: 304 width: 438 height: 428
+    BODY_PERHE = (By.XPATH, u'//BODY/SECTION[15]/DIV[1]/DIV[1]/DIV[2]/DIV[2]/DIV[4]') # x: 1410 y: 304 width: 438 height: 428
     CLASS_DISABLE_ELEMENT = (By.CLASS_NAME, u'disable-element') # x: 0 y: 766 width: 192 height: 68
-    CLASS_ELEMENT_RESTART = (By.CLASS_NAME, u'element-restart') # x: 288 y: 766 width: 288 height: 68
-    CLASS_ELEMENT_ENABLE = (By.CLASS_NAME, u'element-enable') # x: 1632 y: 766 width: 288 height: 68
+
+    # Dynamic objects:
+    CLASS_ELEMENT_ENABLE = (By.CLASS_NAME, u'element-enable')     # x: 1632 y: 782 width: 288 height: 68 # Dynamic object
+
+    def valitse_omistaja(self, parameters=None):
+        if parameters['omistaja'] == "mies":
+            self.click_element(self.BODY_MIES)
+        elif parameters['omistaja'] == "nainen":
+             self.click_element(self.BODY_NAINEN)
+        elif parameters['omistaja'] == "pari":
+             self.click_element(self.BODY_PARI)
+        elif parameters['omistaja'] == "perhe":
+             self.click_element(self.BODY_PERHE)
+        else:
+            self.click_element(self.BODY_MIES)
 
     def click_seuraava_vaihe(self, parameters=None):
         self.click_element(self.CLASS_ELEMENT_ENABLE)

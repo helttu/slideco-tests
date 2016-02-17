@@ -44,5 +44,7 @@ class Maalatut_lasit(CommonUtils):
     CLASS_PRICE = (By.CLASS_NAME, u'price') # x: 1190 y: 639 width: 52 height: 22
 
     def valitse_pintamateriaali_vaihtoehto(self, parameters=None):
-        if parameters['pintamateriaali_vaihtoehdot'] == "cappucino":
-            self.click(self.ALT_PANELMATERIAL_PREMIUM_CAPPUCCINO)
+        if parameters['pintamateriaali_vaihtoehdot'] == "vaalea":
+            self.click_element(self.ALT_PANELMATERIAL_SOFT_WHITE)
+        else:
+            self.click_element(self.ALT_PANELMATERIAL_SOFT_WHITE)

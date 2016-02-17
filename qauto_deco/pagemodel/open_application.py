@@ -30,6 +30,6 @@ class Open_application(CommonUtils):
     # Pagemodel type: root
     # Links found: 0
     # Page model constants:
-    
+
     def open_application_url(self, url):
-        self.open_url(url)
+        self.open_browser(url)

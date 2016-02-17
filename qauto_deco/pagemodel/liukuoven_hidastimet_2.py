@@ -6,8 +6,8 @@ from webframework.extension.util.webtimings import get_measurements
 from webframework.extension.parsers.parameter_parser import get_parameter
 from time import sleep
 
-class Taustalevyt(CommonUtils):
-    # Pagemodel timestamp: 20160201102541
+class Liukuoven_hidastimet_2(CommonUtils):
+    # Pagemodel timestamp: 20160215113656
     # Pagemodel url: http://finndeco.codemen.fi/build/?api=K3JK2FCG
     # Pagemodel area: Full screen
     # Pagemodel screen resolution: (1920, 1080)
@@ -30,11 +30,21 @@ class Taustalevyt(CommonUtils):
     # Pagemodel type: dynamic
     # Links found: 0
     # Page model constants:
-    CONTENT_FURNITURE_BACK_PANEL_STYLE_CONTAINER_LIST_DATA_SET_SAVE = (By.CSS_SELECTOR, u'.content-furniture-back-panel>.style-container-list>div.style.data-set-save-data-bint>.selection-checked>.icon') # x: 1488 y: 151 width: 426 height: 80
-    BODY_EI = (By.XPATH, u'//BODY/SECTION[14]/DIV[2]/DIV[1]/DIV[2]/DIV[2]') # x: 1486 y: 245 width: 430 height: 84
+    CONTENT_PROFILE_EXTRAS_STYLE_LIUKUOVEN_HIDASTIMET = (By.CSS_SELECTOR, u'.content-profile-extras>.style-header>h2') # x: 1486 y: 95 width: 426 height: 28
+    CONTENT_PROFILE_EXTRAS_STYLE_CONTAINER_LIST_DATA_SET_SAVE_BINT = (By.CSS_SELECTOR, u'.content-profile-extras>.style-container-list>div.style.data-set-save-data-bint>.selection-checked>.icon') # x: 1488 y: 151 width: 426 height: 80
+    BODY_VAKIO = (By.XPATH, u'//BODY/SECTION[10]/DIV[2]/DIV[3]/DIV[2]/DIV[2]') # x: 1486 y: 245 width: 430 height: 84
+    CONTROL_CHECKBOX_LIUKUOVEN_HARJANAUHAT = (By.CSS_SELECTOR, u'.control-checkbox>label') # x: 1486 y: 721 width: 426 height: 37
+    CLASS_CUSTOM_CHECKBOX = (By.CLASS_NAME, u'custom-checkbox') # x: 1492 y: 731 width: 20 height: 20
     CLASS_DISABLE_ELEMENT = (By.CLASS_NAME, u'disable-element') # x: 0 y: 766 width: 192 height: 68
-    CLASS_ELEMENT_RESTART = (By.CLASS_NAME, u'element-restart') # x: 288 y: 766 width: 288 height: 68
     CLASS_ELEMENT_ENABLE = (By.CLASS_NAME, u'element-enable') # x: 1632 y: 766 width: 288 height: 68
 
     def click_seuraava_vaihe(self, parameters=None):
         self.click_element(self.CLASS_ELEMENT_ENABLE)
+
+    def valitse_hidastimet(self, parameters=None):
+        if parameters[u'hidastimet'] == u'ei_valintaa':
+            self.click_element(self.CONTENT_PROFILE_EXTRAS_STYLE_CONTAINER_LIST_DATA_SET_SAVE_BINT)
+        elif parameters[u'hidastimet'] == u'vakio':
+            self.click_element(self.BODY_VAKIO)
+        else:
+            self.click_element(self.CONTENT_PROFILE_EXTRAS_STYLE_CONTAINER_LIST_DATA_SET_SAVE_BINT)

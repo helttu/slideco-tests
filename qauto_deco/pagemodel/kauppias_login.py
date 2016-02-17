@@ -39,37 +39,10 @@ class Kauppias_login(CommonUtils):
     CLASS_BTN_DEFAULT = (By.CLASS_NAME, u'btn-default') # x: 750 y: 529 width: 100 height: 34
     CLASS_GLYPHICON_LOG_IN = (By.CLASS_NAME, u'glyphicon-log-in') # x: 793 y: 538 width: 14 height: 14
 
-
-
     # Dynamic objects:
     username_field = (By.XPATH, u'//BODY/DIV[1]/DIV[1]/FORM[1]/DIV[1]/INPUT[1]')     # x: 702 y: 407 width: 196 height: 35 # Dynamic object
     password_field = (By.XPATH, u'//BODY/DIV[1]/DIV[1]/FORM[1]/DIV[2]/INPUT[1]')     # x: 702 y: 457 width: 196 height: 35 # Dynamic object
     login_button = (By.XPATH, u'//BODY/DIV[1]/DIV[1]/FORM[1]/BUTTON[1]')     # x: 750 y: 525 width: 100 height: 34 # Dynamic object
-
-
-    def syota_username(self, parameters=None):
-        self.type(self.ID_EMBER607, parameters)
-
-    def syota_password(self, parameters=None):
-        self.type(self.ID_EMBER609, parameters)
-
-    def klikkaa_login_painiketta(self):
-        self.click(self.CLASS_BTN_DEFAULT)
-
-    def syota_userid(self, parameters=None):
-        self.type(self.ID_EMBER607, parameters)
-
-    def syota_pwd(self, parameters=None):
-        self.type(self.ID_EMBER609, parameters)
-
-    def input_text_username(self, parameters=None):
-        self.input_text(self.ID_EMBER607, parameters)
-
-    def input_text_password(self, parameters=None):
-        self.input_text(self.ID_EMBER609, parameters)
-
-    def click_element_login_button(self):
-        self.click_element(self.CLASS_BTN_DEFAULT)
 
     def input_text_username_field(self, parameters=None):
         self.input_text(self.username_field, parameters)
@@ -79,3 +52,4 @@ class Kauppias_login(CommonUtils):
 
     def click_element_login_button(self):
         self.click_element(self.login_button)
+        self.input_text(self.ID_EMBER609, parameters)

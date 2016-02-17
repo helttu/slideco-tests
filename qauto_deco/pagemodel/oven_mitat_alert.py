@@ -6,8 +6,8 @@ from webframework.extension.util.webtimings import get_measurements
 from webframework.extension.parsers.parameter_parser import get_parameter
 from time import sleep
 
-class Taustalevyt(CommonUtils):
-    # Pagemodel timestamp: 20160201102541
+class Oven_mitat_alert(CommonUtils):
+    # Pagemodel timestamp: 20160215133906
     # Pagemodel url: http://finndeco.codemen.fi/build/?api=K3JK2FCG
     # Pagemodel area: Full screen
     # Pagemodel screen resolution: (1920, 1080)
@@ -30,11 +30,9 @@ class Taustalevyt(CommonUtils):
     # Pagemodel type: dynamic
     # Links found: 0
     # Page model constants:
-    CONTENT_FURNITURE_BACK_PANEL_STYLE_CONTAINER_LIST_DATA_SET_SAVE = (By.CSS_SELECTOR, u'.content-furniture-back-panel>.style-container-list>div.style.data-set-save-data-bint>.selection-checked>.icon') # x: 1488 y: 151 width: 426 height: 80
-    BODY_EI = (By.XPATH, u'//BODY/SECTION[14]/DIV[2]/DIV[1]/DIV[2]/DIV[2]') # x: 1486 y: 245 width: 430 height: 84
-    CLASS_DISABLE_ELEMENT = (By.CLASS_NAME, u'disable-element') # x: 0 y: 766 width: 192 height: 68
-    CLASS_ELEMENT_RESTART = (By.CLASS_NAME, u'element-restart') # x: 288 y: 766 width: 288 height: 68
-    CLASS_ELEMENT_ENABLE = (By.CLASS_NAME, u'element-enable') # x: 1632 y: 766 width: 288 height: 68
+    BODY_OVEN_MITAT = (By.XPATH, u'//BODY/SECTION[4]/DIV[7]/DIV[2]/H2[1]') # x: 735 y: 254 width: 450 height: 45
+    CLASS_CONFIRM = (By.CLASS_NAME, u'confirm') # x: 798 y: 489 width: 160 height: 48
+    CLASS_CANCEL = (By.CLASS_NAME, u'cancel') # x: 962 y: 489 width: 160 height: 48
 
-    def click_seuraava_vaihe(self, parameters=None):
-        self.click_element(self.CLASS_ELEMENT_ENABLE)
+    def click_ok(self, parameters=None):
+        self.click_element(self.CLASS_CONFIRM)

@@ -83,22 +83,22 @@ class Track_orders(CommonUtils):
     reference_customer_name_field = (By.XPATH, u'//div[3]/div/input')     # x: 413 y: 352 width: 180 height: 34 # Dynamic object
 
     def wait_for_visible_reg_kodin_terra_jkl_linkki(self):
-        self.wait_for_visible(self.REG_KODIN_TERRA_JKL)
+        self.wait_until_element_is_visible(self.REG_KODIN_TERRA_JKL)
 
     def type_ref_cust_name(self, parameters=None):
-        self.type(self.REF_CUST_NAME, parameters)
+        self.input_text(self.REF_CUST_NAME, parameters)
 
     def click_descending(self):
-        self.click(self.DESCENDING)
+        self.click_element(self.DESCENDING)
 
     def click_ascending(self):
-        self.click(self.ASCENDING)
+        self.click_element(self.ASCENDING)
 
     def wait_for_visible_ascending(self):
-        self.wait_for_visible(self.ASCENDING)
+        self.wait_until_element_is_visible(self.ASCENDING)
 
     def type_customer_name(self, parameters=None):
-        self.type(self.REF_CUST_NAME, parameters[u'cust_name'])
+        self.input_text(self.REF_CUST_NAME, parameters[u'cust_name'])
 
     def input_text_reference_customer_name_field(self, parameters=None):
         self.input_text(self.reference_customer_name_field, parameters)

@@ -50,12 +50,12 @@ class S200_profiili(CommonUtils):
 
     def valitse_profiili_materiaali(self, parameters=None):
         if parameters[u's200_materiaalit'] == u'valkea':
-            self.click(self.CONTENT_PROFILE_OPTIONS_STYLE_CONTAINER_LIST_DATA_SET_SAVE_BINT_0)
+            self.click_element(self.CONTENT_PROFILE_OPTIONS_STYLE_CONTAINER_LIST_DATA_SET_SAVE_BINT_0)
         elif parameters[u's200_materiaalit'] == u'hopea':
-            self.click(self.ALT_PANELPROFILE_SILVER)
+            self.click_element(self.ALT_PANELPROFILE_SILVER)
         elif parameters[u's200_materiaalit'] == u'shampanja':
-            self.click(self.ALT_PANELPROFILE_SATIN_GOLD)
+            self.click_element(self.ALT_PANELPROFILE_SATIN_GOLD)
         elif parameters[u's200_materiaalit'] == u'musta':
-            self.click(self.ALT_PANELPROFILE_BLACK)
+            self.click_element(self.ALT_PANELPROFILE_BLACK)
         else:
-            self.click(self.CONTENT_PROFILE_OPTIONS_STYLE_CONTAINER_LIST_DATA_SET_SAVE_BINT_0)
+            self.click_element(self.CONTENT_PROFILE_OPTIONS_STYLE_CONTAINER_LIST_DATA_SET_SAVE_BINT_0)

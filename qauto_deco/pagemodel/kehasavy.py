@@ -44,7 +44,5 @@ class Kehasavy(CommonUtils):
     CLASS_CURRENCY = (By.CLASS_NAME, u'currency') # x: 1175 y: 639 width: 9 height: 22
     CLASS_PRICE = (By.CLASS_NAME, u'price') # x: 1190 y: 639 width: 52 height: 22
 
-
-
     def click_seuraava_vaihe(self):
-        self.click(self.ELEMENT_ENABLE_SEURAAVA_VAIHE)
+        self.click_element(self.ELEMENT_ENABLE_SEURAAVA_VAIHE)

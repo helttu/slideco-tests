@@ -50,9 +50,9 @@ class Runkoosat(CommonUtils):
 
     def valitse_runkoosat(self, parameters=None):
         if parameters['kattolevy'] == "true":
-            self.click(self.KATTOLEVY)
+            self.click_element(self.KATTOLEVY)
         else:
             print ""
 
     def click_seuraava_vaihe(self, parameters=None):
-        self.click(self.ELEMENT_ENABLE_SEURAAVA_VAIHE)
+        self.click_element(self.ELEMENT_ENABLE_SEURAAVA_VAIHE)

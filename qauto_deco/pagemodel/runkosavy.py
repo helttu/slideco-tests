@@ -45,25 +45,25 @@ class Runkosavy(CommonUtils):
 
     def select_runkosavy(self, parameters=None):
         if parameters['runkosavy'] == 'valkea':
-            self.click(self.CONTENT_FURNITURE_COLOUR_STYLE_CONTAINER_LIST_DATA_SET_SAVE_BINT)
+            self.click_element(self.CONTENT_FURNITURE_COLOUR_STYLE_CONTAINER_LIST_DATA_SET_SAVE_BINT)
         elif parameters['runkosavy'] == 'valkealine':
-            self.click(self.BODY_VALKEA_LINE)
+            self.click_element(self.BODY_VALKEA_LINE)
         elif parameters['runkosavy'] == 'harmaa':
-            self.click(self.BODY_HARMAA)
+            self.click_element(self.BODY_HARMAA)
         elif parameters['runkosavy'] == 'antrasiitti':
-            self.click(self.BODY_ANTRASIITTI)
+            self.click_element(self.BODY_ANTRASIITTI)
         elif parameters['runkosavy'] == 'ruskealine':
-            self.click(self.BODY_RUSKEA_LINE)
+            self.click_element(self.BODY_RUSKEA_LINE)
         elif parameters['runkosavy'] == 'tumma_pahkina':
-            self.click(self.BODY_TUMMA_PAHKINA)
+            self.click_element(self.BODY_TUMMA_PAHKINA)
         elif parameters['runkosavy'] == 'pahkina':
-            self.click(self.BODY_HKIN)
+            self.click_element(self.BODY_HKIN)
         elif parameters['runkosavy'] == 'tammi':
-            self.click(self.BODY_TAMMI)
+            self.click_element(self.BODY_TAMMI)
         elif parameters['runkosavy'] == 'pyokki':
-            self.click(self.BODY_PY_KKI)
+            self.click_element(self.BODY_PY_KKI)
         else:
-            self.click(self.CONTENT_FURNITURE_COLOUR_STYLE_CONTAINER_LIST_DATA_SET_SAVE_BINT)
+            self.click_element(self.CONTENT_FURNITURE_COLOUR_STYLE_CONTAINER_LIST_DATA_SET_SAVE_BINT)
 
     def click_seuraava_vaihe(self, parameters=None):
-        self.click(self.CLASS_ELEMENT_ENABLE)
+        self.click_element(self.CLASS_ELEMENT_ENABLE)

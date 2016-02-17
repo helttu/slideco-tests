@@ -33,6 +33,13 @@
 		<node id="b40472c0-c8be-11e5-96b7-00247e035201" pagemodel="runkosavy"/>
 		<node id="0cae42b0-cb4f-11e5-b87d-2c600cd4c6d7" pagemodel="set_prices"/>
 		<node id="b3b8e58f-cc05-11e5-80ea-2c600cd4c6d7" pagemodel="retailers"/>
+		<node id="6bf28ccf-cef7-11e5-96e7-00247e035201" pagemodel="vaatekaapin_sijainti"/>
+		<node id="8df6c0e1-cefb-11e5-a079-00247e035201" pagemodel="kenen_vaatekaappi"/>
+		<node id="00ff892e-cefe-11e5-b255-00247e035201" pagemodel="suunnittelumallipohja"/>
+		<node id="a8bb7bc0-d3c7-11e5-abf5-00247e035201" pagemodel="liukuoven_hidastimet_2"/>
+		<node id="b9445cd1-d3d8-11e5-8a84-00247e035201" pagemodel="oven_mitat_alert"/>
+		<node id="0ef71d80-d4a0-11e5-ae8d-00247e035201" pagemodel="s400_profiili"/>
+		<node id="9da8cf0f-d4a0-11e5-b964-00247e035201" pagemodel="s300_profiili"/>
 	</nodes>
 	<edges>
 		<edge additional_input="False" id="fc549930-c01f-11e5-bdbc-a94980e8de8d">
@@ -548,6 +555,125 @@
 		<edge additional_input="False" id="4f354770-cc06-11e5-a75f-2c600cd4c6d7">
 			<start_node id="07bf7d0f-c59f-11e5-8e9d-2c600cd4c6d7"/>
 			<end_node id="0cae42b0-cb4f-11e5-b87d-2c600cd4c6d7"/>
+			<input data="" method_name="" method_node="" parameters="False"/>
+			<output data="" method_name="" parameters="False"/>
+			<preconditions/>
+			<performance think_time="1.0" url="http://" weight="1.0">
+				<request>
+					<method value="GET"/>
+					<content_type value="text/html"/>
+					<parameters/>
+				</request>
+			</performance>
+			<set_guard key="" value=""/>
+			<check_guard key="" value=""/>
+			<epics/>
+		</edge>
+		<edge additional_input="False" id="6bf28cd0-cef7-11e5-9913-00247e035201">
+			<start_node id="b40472c0-c8be-11e5-96b7-00247e035201"/>
+			<end_node id="6bf28ccf-cef7-11e5-96e7-00247e035201"/>
+			<input data="" method_name="" method_node="" parameters="False"/>
+			<output data="" method_name="" parameters="False"/>
+			<preconditions/>
+			<performance think_time="1.0" url="http://" weight="1.0">
+				<request>
+					<method value="GET"/>
+					<content_type value="text/html"/>
+					<parameters/>
+				</request>
+			</performance>
+			<set_guard key="" value=""/>
+			<check_guard key="" value=""/>
+			<epics/>
+		</edge>
+		<edge additional_input="False" id="9f1c66de-cefb-11e5-a00b-00247e035201">
+			<start_node id="6bf28ccf-cef7-11e5-96e7-00247e035201"/>
+			<end_node id="8df6c0e1-cefb-11e5-a079-00247e035201"/>
+			<input data="" method_name="" method_node="" parameters="False"/>
+			<output data="" method_name="" parameters="False"/>
+			<preconditions/>
+			<performance think_time="1.0" url="http://" weight="1.0">
+				<request>
+					<method value="GET"/>
+					<content_type value="text/html"/>
+					<parameters/>
+				</request>
+			</performance>
+			<set_guard key="" value=""/>
+			<check_guard key="" value=""/>
+			<epics/>
+		</edge>
+		<edge additional_input="False" id="00ff892f-cefe-11e5-aa50-00247e035201">
+			<start_node id="8df6c0e1-cefb-11e5-a079-00247e035201"/>
+			<end_node id="00ff892e-cefe-11e5-b255-00247e035201"/>
+			<input data="" method_name="" method_node="" parameters="False"/>
+			<output data="" method_name="" parameters="False"/>
+			<preconditions/>
+			<performance think_time="1.0" url="http://" weight="1.0">
+				<request>
+					<method value="GET"/>
+					<content_type value="text/html"/>
+					<parameters/>
+				</request>
+			</performance>
+			<set_guard key="" value=""/>
+			<check_guard key="" value=""/>
+			<epics/>
+		</edge>
+		<edge additional_input="False" id="a8bba2d1-d3c7-11e5-a00d-00247e035201">
+			<start_node id="fa83d630-c032-11e5-9353-a94980e8de8d"/>
+			<end_node id="a8bb7bc0-d3c7-11e5-abf5-00247e035201"/>
+			<input data="" method_name="" method_node="" parameters="False"/>
+			<output data="" method_name="" parameters="False"/>
+			<preconditions/>
+			<performance think_time="1.0" url="http://" weight="1.0">
+				<request>
+					<method value="GET"/>
+					<content_type value="text/html"/>
+					<parameters/>
+				</request>
+			</performance>
+			<set_guard key="" value=""/>
+			<check_guard key="" value=""/>
+			<epics/>
+		</edge>
+		<edge additional_input="False" id="b9445cd2-d3d8-11e5-950c-00247e035201">
+			<start_node id="2e873670-c02e-11e5-b6ad-a94980e8de8d"/>
+			<end_node id="b9445cd1-d3d8-11e5-8a84-00247e035201"/>
+			<input data="" method_name="" method_node="" parameters="False"/>
+			<output data="" method_name="" parameters="False"/>
+			<preconditions/>
+			<performance think_time="1.0" url="http://" weight="1.0">
+				<request>
+					<method value="GET"/>
+					<content_type value="text/html"/>
+					<parameters/>
+				</request>
+			</performance>
+			<set_guard key="" value=""/>
+			<check_guard key="" value=""/>
+			<epics/>
+		</edge>
+		<edge additional_input="False" id="0ef74491-d4a0-11e5-85ea-00247e035201">
+			<start_node id="fa83d630-c032-11e5-9353-a94980e8de8d"/>
+			<end_node id="0ef71d80-d4a0-11e5-ae8d-00247e035201"/>
+			<input data="" method_name="" method_node="" parameters="False"/>
+			<output data="" method_name="" parameters="False"/>
+			<preconditions/>
+			<performance think_time="1.0" url="http://" weight="1.0">
+				<request>
+					<method value="GET"/>
+					<content_type value="text/html"/>
+					<parameters/>
+				</request>
+			</performance>
+			<set_guard key="" value=""/>
+			<check_guard key="" value=""/>
+			<epics/>
+		</edge>
+		<edge additional_input="False" id="9da8cf10-d4a0-11e5-94bd-00247e035201">
+			<start_node id="fa83d630-c032-11e5-9353-a94980e8de8d"/>
+			<end_node id="9da8cf0f-d4a0-11e5-b964-00247e035201"/>
 			<input data="" method_name="" method_node="" parameters="False"/>
 			<output data="" method_name="" parameters="False"/>
 			<preconditions/>

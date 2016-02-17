@@ -21,6 +21,9 @@ from pagemodel.kehasavy import Kehasavy
 from pagemodel.huomio_popup import Huomio_popup
 from pagemodel.taustalevyt import Taustalevyt
 from pagemodel.runkosavy import Runkosavy
+from pagemodel.vaatekaapin_sijainti import Vaatekaapin_sijainti
+from pagemodel.kenen_vaatekaappi import Kenen_vaatekaappi
+from pagemodel.suunnittelumallipohja import Suunnittelumallipohja
 
 class Finndeco(BaseTest):
     parameters = get_all_parameters()
@@ -43,6 +46,9 @@ class Finndeco(BaseTest):
     huomio_popup = Huomio_popup()
     taustalevyt = Taustalevyt()
     runkosavy = Runkosavy()
+    vaatekaapin_sijainti = Vaatekaapin_sijainti()
+    kenen_vaatekaappi = Kenen_vaatekaappi()
+    suunnittelumallipohja = Suunnittelumallipohja()
 
     def setUp(self):
         pass
@@ -79,5 +85,11 @@ class Finndeco(BaseTest):
         self.taustalevyt.click_seuraava_vaihe()
         self.runkosavy.select_runkosavy(self.parameters[u'runkosavy'])
         self.runkosavy.click_seuraava_vaihe()
+        self.vaatekaapin_sijainti.valitse_sijainti(self.parameters[u'kaapin_sijainti'])
+        self.vaatekaapin_sijainti.click_seuraava_vaihe()
+        self.kenen_vaatekaappi.valitse_omistaja(self.parameters[u'kenen_vaatekaappi'])
+        self.kenen_vaatekaappi.click_seuraava_vaihe()
+        self.suunnittelumallipohja.valitse_suunnitelumallipohja(self.parameters[u'suunnittelumallipohja'])
+        self.suunnittelumallipohja.click_seuraava_vaihe()
         self.hinta_ja_laheta.syota_yhteystiedot_ja_tallenna(self.parameters[u'yhteystiedot'])
         sleep(5)

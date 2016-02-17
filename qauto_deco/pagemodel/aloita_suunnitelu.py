@@ -34,4 +34,4 @@ class Aloita_suunnitelu(CommonUtils):
     ELEMENT_LOAD_AVAA_SUUNNITELMASI = (By.CSS_SELECTOR, u'.element-load>span') # x: 0 y: 640 width: 240 height: 23
 
     def click_aloita_suunnittelu(self):
-        self.click(self.CLASS_NEW)
+        self.click_element(self.CLASS_NEW)
