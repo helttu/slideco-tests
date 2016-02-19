@@ -49,7 +49,6 @@ class Ovimallit(CommonUtils):
     BODY_LIUKUOVIEN_SUUNNITTELU_VALITSE_VAKIOMALLEISTA = (By.XPATH, u'//BODY/SECTION[6]/DIV[1]')     # x: 125 y: 572 width: 230 height: 174 # Dynamic object
     CONTAINS_TEXT_VALITSE_VAKIOMALLEISTA = (By.XPATH, u'//p[contains(text(),"Valitse vakiomalleista")]')     # x: 145 y: 688 width: 190 height: 18 # Dynamic object
 
-
     def valitse_ovimalli(self, parameters=None):
         if parameters['ovimalli'] == "ovi_pysty_2":
             self.click_element(self.OVI_PYSTY_KAKSI)
@@ -63,3 +62,4 @@ class Ovimallit(CommonUtils):
 
     def show_help(self, parameters=None):
         self.mouse_over(self.ELEMENT_HELP)
+        self.element_text_should_be(self.CONTAINS_TEXT_LIUKUOVIEN_SUUNNITTELU, u'Liukuovien suunnittelu')

@@ -24,6 +24,7 @@ from pagemodel.runkosavy import Runkosavy
 from pagemodel.vaatekaapin_sijainti import Vaatekaapin_sijainti
 from pagemodel.kenen_vaatekaappi import Kenen_vaatekaappi
 from pagemodel.suunnittelumallipohja import Suunnittelumallipohja
+from pagemodel.s200_profiili import S200_profiili
 
 class Finndeco(BaseTest):
     parameters = get_all_parameters()
@@ -49,6 +50,7 @@ class Finndeco(BaseTest):
     vaatekaapin_sijainti = Vaatekaapin_sijainti()
     kenen_vaatekaappi = Kenen_vaatekaappi()
     suunnittelumallipohja = Suunnittelumallipohja()
+    s200_profiili = S200_profiili()
 
     def setUp(self):
         pass
@@ -69,6 +71,20 @@ class Finndeco(BaseTest):
         valittu_profiili = self.parameters[u'liukuovi_profiili'][u'profiili']
         if valittu_profiili == u's100':
             self.s100_profiili.valitse_profiili_materiaali(self.parameters[u'profiili_materiaalit'])
+        elif valittu_profiili == u's200':
+            self.s200_profiili.valitse_profiili_materiaali(self.parameters[u'profiili_materiaalit'])
+        elif valittu_profiili == u's300':
+            self.s300_profiili.valitse_profiili_materiaali(self.parameters[u'profiili_materiaalit'])
+        elif valittu_profiili == u's400':
+            self.s400_profiili.valitse_profiili_materiaali(self.parameters[u'profiili_materiaalit'])
+        elif valittu_profiili == u'a101':
+            self.a101_profiili.valitse_profiili_materiaali(self.parameters[u'profiili_materiaalit'])
+        elif valittu_profiili == u'a102':
+            self.a102_profiili.valitse_profiili_materiaali(self.parameters[u'profiili_materiaalit'])
+        elif valittu_profiili == u'a103':
+            self.a103_profiili.valitse_profiili_materiaali(self.parameters[u'profiili_materiaalit'])
+        elif valittu_profiili == u'a104':
+            self.a104_profiili.valitse_profiili_materiaali(self.parameters[u'profiili_materiaalit'])
         else:
             pass
         self.liukovet_profiili.click_seuraava_vaihe()
