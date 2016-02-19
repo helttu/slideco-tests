@@ -64,6 +64,7 @@ class Finndeco(BaseTest):
         self.valinta_kork_ja_lev.click_seuraava_vaihe()
         self.valitse_ovien_maara.valitse_ovien_maara(self.parameters[u'ovet'])
         self.valitse_ovien_maara.click_seuraava_vaihe()
+        self.liukovet_profiili.show_help()
         self.liukovet_profiili.valitse_liukuoviprofiili(self.parameters[u'liukuovi_profiili'])
         valittu_profiili = self.parameters[u'liukuovi_profiili'][u'profiili']
         if valittu_profiili == u's100':
@@ -75,9 +76,11 @@ class Finndeco(BaseTest):
         self.runkoosat.valitse_runkoosat(self.parameters[u'runkoosat'])
         self.runkoosat.click_seuraava_vaihe()
         self.kehasavy.click_seuraava_vaihe()
+        self.ovimallit.show_help()
         self.ovimallit.valitse_ovimalli(self.parameters[u'ovimallit'])
         self.ovimallit.click_seuraava_vaihe()
         self.jakolistat.valitse_seuraava_vaihe()
+        self.pintamateriaalit.show_help()
         self.pintamateriaalit.valitse_pintamateriaalit(self.parameters[u'pintamateriaalit'])
         self.maalatut_lasit.valitse_pintamateriaali_vaihtoehto(self.parameters[u'pintamateriaalit'])
         self.pintamateriaalit.click_seuraava_vaihe()

@@ -55,6 +55,8 @@ class Liukovet_profiili(CommonUtils):
     ALT_A102 = (By.CSS_SELECTOR, u'img[alt="A102"]')     # x: 1242 y: 442 width: 76 height: 76 # Dynamic object
     ALT_A103 = (By.CSS_SELECTOR, u'img[alt="A103"]')     # x: 1242 y: 538 width: 76 height: 76 # Dynamic object
     ALT_A104 = (By.CSS_SELECTOR, u'img[alt="A104"]')     # x: 1242 y: 635 width: 76 height: 76 # Dynamic object
+    CONTAINS_TEXT_LIUKUOVIPROFIILIT = (By.XPATH, u'//h2[contains(text(),"Liukuoviprofiilit")]')     # x: 145 y: 552 width: 190 height: 30 # Dynamic object
+    BODY_LIUKUOVIPROFIILIT_OVIEN_PROFIILIT_OVAT_LIUKUOVIEN_KEH_PROFIILEJA_S100_JA = (By.XPATH, u'//BODY/SECTION[5]/DIV[1]')     # x: 125 y: 512 width: 230 height: 234 # Dynamic object
 
     def valitse_liukuoviprofiili(self, parameters=None):
         if parameters['profiili'] == "s200":
@@ -74,3 +76,7 @@ class Liukovet_profiili(CommonUtils):
 
     def click_seuraava_vaihe(self):
         self.click_element(self.ELEMENT_ENABLE_SEURAAVA_VAIHE)
+
+    def show_help(self, parameters=None):
+        self.mouse_over(self.ELEMENT_HELP)
+        self.element_text_should_be(self.CONTAINS_TEXT_LIUKUOVIPROFIILIT, u'Liukuoviprofiilit')
