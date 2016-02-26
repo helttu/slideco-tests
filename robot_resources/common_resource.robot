@@ -227,7 +227,7 @@ Klikkaa Set Prices
 Klikkaa Configure Applications
 	Click Element   					link=Configure applications
 	Wait Until Element Is Visible   	//td[2]/button
-	Wait Until Page Contains  			7 / 40 applications in use    timeout=30s
+	Wait Until Page Contains  			7 / 50 applications in use    timeout=30s
 
 Syötä Customer Name Ja Tarkista
 	[Arguments]     					${customer_name}    ${total}
@@ -270,18 +270,19 @@ Klikkaa Invite Ja Syötä Retailer Email
 	Wait Until Element Is Visible  		//input[@type='text']    timeout=30s
 	Input Text  						//input[@type='text']    ${email}
 	Click Element  						xpath=(//button[@type='button'])[3]
-	Sleep  								2s
-	Wait Until Element Is Visible  		xpath=(//button[@type='button'])[2]   timeout=30s
-	Click Element   					xpath=(//button[@type='button'])[2]
 	Sleep   							2s
+	Wait Until Element Is Visible   	xpath=(//button[@type='button'])[2]    timeout=30s
+	Click Element 						xpath=(//button[@type='button'])[2]
 	Wait Until Page Contains  			${email}    timeout=30s
 
 Poista Manager
 	[Arguments]     					${email}
-	Click Element  						//*[@id='retailer-content-floated']/div/div/div/div[2]/table/tbody/tr[23]/td[7]/button
+	Click Element  						//tr[29]/td[7]/button
 	Sleep  								2s
 	Wait Until Page Contains   			You are about to remove from retailer (no name)    timeout=30s
-	Click Element 						xpath=(//button[@type='button'])[3]
+	Click Element 						//body/div[3]
+	Wait Until Element Is Visible  		//button[2]    timeout=30s
+	Click Element  						//button[2]
 	Wait Until Page Contains 			${email}    timeout=30s
 	Reload Page
 	Wait Until Page Does Not Contain    ${email}    timeout=30s
@@ -289,6 +290,7 @@ Poista Manager
 Syötä Merkkijono VAT Multiplier Kenttään
 	[Arguments]     					${string}
 	Input Text   						//div[@id='retailer-content-floated']/div/div/div/div[2]/div/div/input    ${string}
+	Press Key               			//div[@id='retailer-content-floated']/div/div/div/div[2]/div/div/input    \\09
 
 Tarkista Että Merkkijonoa Ei Hyväksytä
 	Page Should Not Contain  			Retailer updated
