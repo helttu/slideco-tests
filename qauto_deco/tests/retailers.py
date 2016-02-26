@@ -27,7 +27,7 @@ class Retailers(BaseTest):
         # sisäänkirjautuminen
         self.kauppias_login.input_text_username_field(self.parameters[u'kauppias_login'][u'user'])
         self.kauppias_login.input_text_password_field(self.parameters[u'kauppias_login'][u'pwd'])
-        self.kauppias_login.click_element_login_button()
+        self.kauppias_login.click_login_button()
         # retailers linkki
         self.retailers.click_element_retailers_link()
         # kosti testaa -linkki

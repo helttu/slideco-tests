@@ -27,7 +27,7 @@ class Track_orders_test_set(BaseTest):
         # sisäänkirjautuminen
         self.kauppias_login.input_text_username_field(self.parameters[u'kauppias_login'][u'user'])
         self.kauppias_login.input_text_password_field(self.parameters[u'kauppias_login'][u'pwd'])
-        self.kauppias_login.click_element_login_button()
+        self.kauppias_login.click_login_button()
         # track orders linkki
         self.kauppias_account.click_element_track_orders_link()
         # customer name
@@ -41,7 +41,7 @@ class Track_orders_test_set(BaseTest):
         # sisäänkirjautuminen
         self.kauppias_login.input_text_username_field(self.parameters[u'kauppias_login'][u'user'])
         self.kauppias_login.input_text_password_field(self.parameters[u'kauppias_login'][u'pwd'])
-        self.kauppias_login.click_element_login_button()
+        self.kauppias_login.click_login_button()
         # valitse track orders
         self.kauppias_account.click_element_track_orders_link()
         # descending
@@ -57,7 +57,7 @@ class Track_orders_test_set(BaseTest):
         # sisäänkirjautuminen
         self.kauppias_login.input_text_username_field(self.parameters[u'kauppias_login'][u'user'])
         self.kauppias_login.input_text_password_field(self.parameters[u'kauppias_login'][u'pwd'])
-        self.kauppias_login.click_element_login_button()
+        self.kauppias_login.click_login_button()
         # valitse track orders
         self.kauppias_account.click_element_track_orders_link()
         self.track_orders.wait_until_element_is_visible_creator_list()

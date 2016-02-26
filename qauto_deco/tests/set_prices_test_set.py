@@ -29,7 +29,7 @@ class Set_prices_test_set(BaseTest):
         # sisäänkirjautuminen
         self.kauppias_login.input_text_username_field(self.parameters[u'kauppias_login'][u'user'])
         self.kauppias_login.input_text_password_field(self.parameters[u'kauppias_login'][u'pwd'])
-        self.kauppias_login.click_element_login_button()
+        self.kauppias_login.click_login_button()
         # valitse set prices
         self.set_prices.click_element_set_prices_link()
         self.set_prices.wait_until_element_is_visible_vat_multiplier_field()

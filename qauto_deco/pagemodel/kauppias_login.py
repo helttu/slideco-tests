@@ -43,6 +43,8 @@ class Kauppias_login(CommonUtils):
     username_field = (By.XPATH, u'//BODY/DIV[1]/DIV[1]/FORM[1]/DIV[1]/INPUT[1]')     # x: 702 y: 407 width: 196 height: 35 # Dynamic object
     password_field = (By.XPATH, u'//BODY/DIV[1]/DIV[1]/FORM[1]/DIV[2]/INPUT[1]')     # x: 702 y: 457 width: 196 height: 35 # Dynamic object
     login_button = (By.XPATH, u'//BODY/DIV[1]/DIV[1]/FORM[1]/BUTTON[1]')     # x: 750 y: 525 width: 100 height: 34 # Dynamic object
+    login_button = (By.XPATH, u'//button')     # x: 750 y: 525 width: 100 height: 34 # Dynamic object
+
 
     def input_text_username_field(self, parameters=None):
         self.input_text(self.username_field, parameters)
@@ -53,3 +55,6 @@ class Kauppias_login(CommonUtils):
     def click_element_login_button(self):
         self.click_element(self.login_button)
         self.input_text(self.ID_EMBER609, parameters)
+
+    def click_login_button(self):
+        self.click_element(self.login_button)
