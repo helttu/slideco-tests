@@ -60,7 +60,7 @@
 		<parameter name="omistaja" pagemodel="kenen_vaatekaappi" value="mies"/>
 	</testcase>
 	<testcase name="profiili_materiaalit">
-		<parameter name="s200_materiaalit" value="hopea"/>
+		<parameter name="s200_materiaalit" value="musta"/>
 		<parameter name="s100_materiaalit" value="wenge"/>
 		<parameter name="a101_materiaalit" value="valkea"/>
 		<parameter name="a102_materiaalit" value="musta"/>

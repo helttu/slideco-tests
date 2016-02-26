@@ -45,10 +45,21 @@ class Ovimallit(CommonUtils):
     # Dynamic objects:
     OVI_PYSTY_KAKSI = (By.XPATH, u'//BODY/SECTION[12]/DIV[2]/DIV[1]/DIV[2]/DIV[2]/DIV[1]')     # x: 1364 y: 136 width: 76 height: 76 # Dynamic object
     OVI_PYSTY_KOLME = (By.XPATH, u'//BODY/SECTION[12]/DIV[2]/DIV[1]/DIV[2]/DIV[3]/DIV[1]')     # x: 1460 y: 136 width: 76 height: 76 # Dynamic object
+    CONTAINS_TEXT_LIUKUOVIEN_SUUNNITTELU = (By.XPATH, u'//h2[contains(text(),"Liukuovien suunnittelu")]')     # x: 145 y: 612 width: 190 height: 60 # Dynamic object
+    BODY_LIUKUOVIEN_SUUNNITTELU_VALITSE_VAKIOMALLEISTA = (By.XPATH, u'//BODY/SECTION[6]/DIV[1]')     # x: 125 y: 572 width: 230 height: 174 # Dynamic object
+    CONTAINS_TEXT_VALITSE_VAKIOMALLEISTA = (By.XPATH, u'//p[contains(text(),"Valitse vakiomalleista")]')     # x: 145 y: 688 width: 190 height: 18 # Dynamic object
 
     def valitse_ovimalli(self, parameters=None):
         if parameters['ovimalli'] == "ovi_pysty_2":
             self.click_element(self.OVI_PYSTY_KAKSI)
+        elif parameters['ovimalli'] == "ovi_pysty_3":
+            self.click_element(self.OVI_PYSTY_KOLME)
+        else:
+            self.click_element(self.STYLE_ACTIVE_SELECTION_CHECKED_BG)
 
     def click_seuraava_vaihe(self, parameters=None):
         self.click_element(self.ELEMENT_ENABLE_SEURAAVA_VAIHE)
+
+    def show_help(self, parameters=None):
+        self.mouse_over(self.ELEMENT_HELP)
+        self.element_text_should_be(self.CONTAINS_TEXT_LIUKUOVIEN_SUUNNITTELU, u'Liukuovien suunnittelu')

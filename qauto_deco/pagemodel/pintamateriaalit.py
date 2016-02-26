@@ -43,9 +43,16 @@ class Pintamateriaalit(CommonUtils):
     CLASS_CURRENCY = (By.CLASS_NAME, u'currency') # x: 1175 y: 639 width: 9 height: 22
     CLASS_PRICE = (By.CLASS_NAME, u'price') # x: 1190 y: 639 width: 52 height: 22
 
+    # Dynamic objects:
+    CONTAINS_TEXT_PINTAMATERIAALIT = (By.XPATH, u'//h2[contains(text(),"Pintamateriaalit")]')     # x: 145 y: 480 width: 190 height: 30 # Dynamic object
+    BODY_PINTAMATERIAALIT_VALITSE_VAAKA_PUUNSYYMATERIAALEILLA_ON_MAKSIMIKORKEUS_SAAT_PINNAN_VAAKAAN = (By.XPATH, u'//BODY/SECTION[6]/DIV[1]')     # x: 125 y: 440 width: 230 height: 306 # Dynamic object
+
     def valitse_pintamateriaalit(self, parameters=None):
         if parameters['pintamateriaali'] == "maalatut lasit":
             self.click_element(self.STYLE_MULTITHUMB_TWO_THUMB)
 
     def click_seuraava_vaihe(self):
         self.click_element(self.ELEMENT_ENABLE_SEURAAVA_VAIHE)
+
+    def show_help(self, parameters=None):
+        self.mouse_over(self.ELEMENT_HELP)
