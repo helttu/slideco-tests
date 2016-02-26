@@ -32,9 +32,9 @@ class Track_orders_test_set(BaseTest):
         self.kauppias_account.click_element_track_orders_link()
         # customer name
         self.track_orders.input_text_reference_customer_name_field(self.parameters[u'track_orders'][u'cust_name'])
-        # tarkistus => kodin terra -linkki, testiautomaatio
+        sleep(2)
+        # tarkistus
         self.track_orders.wait_until_element_is_visible_kodin_terra_link()
-        self.track_orders.wait_until_page_contains()
 
     def test_sort_orders_by_date(self):
         self.open_application.open_application_url(u'http://finndeco.codemen.fi/manage/')
@@ -44,13 +44,12 @@ class Track_orders_test_set(BaseTest):
         self.kauppias_login.click_login_button()
         # valitse track orders
         self.kauppias_account.click_element_track_orders_link()
-        # descending
+        # klikkaa descending ja tarkista ascending-linkki
         self.track_orders.click_element_descending()
         self.track_orders.wait_until_element_is_visible_ascending()
-        # ascending
+        # klikkaa ascending ja tarkista kodin terra -linkki
         self.track_orders.click_element_ascending()
         self.track_orders.wait_until_element_is_visible_kodin_terra_link()
-        self.track_orders.wait_until_page_contains_customer_name()
 
     def test_search_orders_by_filters(self):
         self.open_application.open_application_url(u'http://finndeco.codemen.fi/manage/')
@@ -62,4 +61,5 @@ class Track_orders_test_set(BaseTest):
         self.kauppias_account.click_element_track_orders_link()
         self.track_orders.wait_until_element_is_visible_creator_list()
         # todo: valitse customer listasta
-        self.track_orders.select_customer_from_list()
+        self.track_orders.select_from_list_by_label_creator_list(self.parameters[u'track_orders'][u'creator_list'])
+        self.track_orders.wait_until_element_is_visible_reg_kodin_terra_jkl()

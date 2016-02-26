@@ -32,8 +32,9 @@
 		<parameter name="huone" pagemodel="vaatekaapin_sijainti" value="makuuhuone"/>
 	</testcase>
 	<testcase name="track_orders">
-		<parameter name="cust_name" pagemodel="track_orders" value="Sanna Salmio"/>
+		<parameter name="cust_name" pagemodel="track_orders" value="Testiautomaatio Helsinki"/>
 		<parameter name="creator_list" pagemodel="track_orders" value="Customer"/>
+		<parameter name="total" pagemodel="track_orders" value="€0.00"/>
 	</testcase>
 	<testcase name="yhteystiedot">
 		<parameter name="full_name" pagemodel="hinta_ja_laheta" value="Testiautomaation"/>

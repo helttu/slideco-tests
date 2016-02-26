@@ -124,5 +124,14 @@ class Track_orders(CommonUtils):
     def select_customer_from_list(self, parameters=None):
         self.select_from_list_by_label(self.CREATOR_LIST, parameters[u'creator_list'])
 
-    def wait_until_page_contains_customer_name(self, parameters=None):
-        self.wait_until_page_contains(parameters[u'cust_name'])
+    def select_from_creator_list_by_value(self, parameters=None):
+        self.select_from_list_by_value(self.CREATOR_LIST, parameters)
+
+    def select_from_list_by_label_creator_list(self, parameters=None):
+        self.select_from_list_by_label(self.CREATOR_LIST, parameters)
+
+    def wait_until_page_contains_total(self, parameters=None): # Type: verification
+        self.wait_until_page_contains(parameters[u'total'])
+
+    def wait_until_element_is_visible_reg_kodin_terra_jkl(self):
+        self.wait_until_element_is_visible(self.REG_KODIN_TERRA_JKL)
