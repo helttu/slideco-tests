@@ -6,7 +6,7 @@ Search By Customer Name Or By Reference Number
     [Tags]  valmis
     Sisäänkirjaudu Slideco Management System        sami.stedt@q-factory.fi    FinnDSami#9
     Klikkaa Track Orders
-    Syötä Customer Name Ja Tarkista 				Testiautomaatio    €549.00
+    Syötä Customer Name Ja Tarkista 				Testiautomaatio    Testiautomaatio Helsinki    €0.00
     [Teardown]    Close Browser
 
 Search Orders By Filters
