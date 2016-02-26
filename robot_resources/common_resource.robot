@@ -186,11 +186,12 @@ Klikkaa See Variations
 	Wait Until Page Contains  			Extras    timeout=30s
 
 Syötä Customer Name Ja Tarkista Tulokset
-	[Arguments]     					${ref_cust_name}    ${total}
-	Input Text   						//div[3]/div/input    	${ref_cust_name}
+	[Arguments]     					${cust_name_input}    	${cust_name_result}    ${total}
+	Input Text   						//div[3]/div/input    	${cust_name_input}
 	Wait Until Element Is Visible  		//div[4]/select         timeout=30s
 	# Creator
 	Select From List   					//div[4]/select    		Customer
+	Wait Until Page Contains   			${cust_name_result}     timeout=30s
 	Wait Until Page Contains   			${total}   				timeout=30s
 
 Valitse Creator Ja Tarkista Tulokset
