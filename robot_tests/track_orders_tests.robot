@@ -13,7 +13,7 @@ Search Orders By Filters
 	[Tags]  valmis
     Sisäänkirjaudu Slideco Management System        sami.stedt@q-factory.fi    FinnDSami#9
     Klikkaa Track Orders
-    Valitse Creator Ja Tarkista 					Customer    Sanna Salmio Jyväskylä    €715.79
+    Valitse Creator Ja Tarkista 					Customer    Sanna Salmio Jyväskylä    €718.00
     [Teardown]    Close Browser
 
 Sort Orders By Date
