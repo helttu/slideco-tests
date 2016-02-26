@@ -70,3 +70,9 @@ class Set_prices(CommonUtils):
 
     def input_text_vat_multiplier_field(self, parameters=None):
         self.input_text(self.VAT_MULTIPLIER_FIELD, parameters)
+
+    def input_empty_text_vat_multiplier_field(self, parameters=None):
+        self.input_text(self.VAT_MULTIPLIER_FIELD, parameters)
+
+    def input_text_vat_multiplier_field(self, parameters=None):
+        self.input_text(self.VAT_MULTIPLIER_FIELD, parameters)

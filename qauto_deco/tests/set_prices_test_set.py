@@ -35,3 +35,15 @@ class Set_prices_test_set(BaseTest):
         self.set_prices.wait_until_element_is_visible_vat_multiplier_field()
         # syötä merkkijono
         self.set_prices.input_text_vat_multiplier_field(self.parameters[u'set_prices'][u'vat_multiplier'])
+
+    def test_dont_allow_empty_values(self):
+        self.open_application.open_application_url(u'http://finndeco.codemen.fi/manage/')
+        # sisäänkirjautuminen
+        self.kauppias_login.input_text_username_field(self.parameters[u'kauppias_login'][u'user'])
+        self.kauppias_login.input_text_password_field(self.parameters[u'kauppias_login'][u'pwd'])
+        self.kauppias_login.click_login_button()
+        # valitse set prices
+        self.set_prices.click_element_set_prices_link()
+        self.set_prices.wait_until_element_is_visible_vat_multiplier_field()
+        # syötä merkkijono
+        self.set_prices.input_empty_text_vat_multiplier_field(u'""')
