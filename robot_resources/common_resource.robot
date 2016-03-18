@@ -278,7 +278,7 @@ Klikkaa Invite Ja Syötä Retailer Email
 
 Poista Manager
 	[Arguments]     					${email}
-	Click Element  						//tr[29]/td[7]/button
+	Click Element  						//tr[30]/td[7]/button
 	Sleep  								2s
 	Wait Until Page Contains   			You are about to remove from retailer (no name)    timeout=30s
 	Click Element 						//body/div[3]

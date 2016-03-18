@@ -6,6 +6,6 @@ Invite Manager And Remove A Manager
     [Tags]  valmis
     Sisäänkirjaudu Slideco Management System        sami.stedt@q-factory.fi    FinnDSami#9
     Klikkaa Managers
-    Klikkaa Invite Ja Syötä Retailer Email          testi@automaatio.fi
-    Poista Manager                                  testi@automaatio.fi
+    Klikkaa Invite Ja Syötä Retailer Email          robot.framework@testiautomaatio.fi
+    Poista Manager                                  robot.framework@testiautomaatio.fi
     [Teardown]    Close Browser
