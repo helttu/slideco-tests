@@ -270,20 +270,17 @@ Klikkaa Invite Ja Syötä Retailer Email
 	Click Element   					//td[2]/button
 	Wait Until Element Is Visible  		//input[@type='text']    timeout=30s
 	Input Text  						//input[@type='text']    ${email}
-	Click Element  						xpath=(//button[@type='button'])[3]
+	Click Element  						//*[text()[contains(.,'OK')]]
 	Sleep   							2s
-	Wait Until Element Is Visible   	xpath=(//button[@type='button'])[2]    timeout=30s
-	Click Element 						xpath=(//button[@type='button'])[2]
+	Wait Until Element Is Visible   	//*[text()[contains(.,'OK')]]    timeout=30s
+	Click Element 						//*[text()[contains(.,'OK')]]
 	Wait Until Page Contains  			${email}    timeout=30s
 
 Poista Manager
 	[Arguments]     					${email}
 	Click Element  						//tr[30]/td[7]/button
-	Sleep  								2s
 	Wait Until Page Contains   			You are about to remove from retailer (no name)    timeout=30s
-	Click Element 						//body/div[3]
-	Wait Until Element Is Visible  		//button[2]    timeout=30s
-	Click Element  						//button[2]
+	Click Element 						//*[text()[contains(.,'OK')]]
 	Wait Until Page Contains 			${email}    timeout=30s
 	Reload Page
 	Wait Until Page Does Not Contain    ${email}    timeout=30s
