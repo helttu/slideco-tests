@@ -134,18 +134,16 @@ Valitse Mieleisesi Malli Suunnitelmasi Pohjaksi
 
 Klikkaa Seurava Vaihe Huoneen Kuva Sivulla
 	Click Element  						//section[@id='section-progress_navigation']/div[5]/span
-	Wait Until Element Is Visible  		css=button[type="submit"]    								timeout=30s
+	Wait Until Element Is Visible  		name=full_name    								timeout=30s
 
 Tallenna Suunnitelma, Lähetä Ja Ota Komerokoodi Talteen
-	Click Element    					css=button[type="submit"]
-	Wait Until Element Is Visible   	name=full_name    				timeout=30s
 	# Nimi ja asuinpaikka
 	Input Text  						name=full_name    				Testiautomaatio Helsinki
 	Wait Until Element Is Visible   	name=email    					timeout=30s
 	# Sähköposti
 	Input Text  						name=email    					sami.stedt@q-factory.fi
-	Wait Until Element Is Visible   	css=button[type="submit"]    	timeout=30s
-	Click Element   					css=button[type="submit"]
+	Wait Until Element Is Visible   	//*[@id='section-sidebar_storage']/div/div[4]/form/button    	timeout=30s
+	Click Element   					//*[@id='section-sidebar_storage']/div/div[4]/form/button
 	Wait Until Element Is Visible   	//*[@id='section-sidebar_storage']/div/div[4]/form/div[2]/span[1]    timeout=30s
 	${koodi_1}=   						Get Text    //*[@id='section-sidebar_storage']/div/div[4]/form/div[2]/span[1]
 	Set Global Variable    				${koodi_1}
