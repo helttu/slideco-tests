@@ -18,8 +18,10 @@ Suunnitelman Tekeminen Ja Komerokoodin Tallennus
     Valitse Liukuovien Määrä Ja Klikkaa Seuraava Vaihe
     Valitse Mieleisesi Liukuoviprofiili
     Valitse Mieleisesi Profiilisävy Ja Klikkaa Seuraava Vaihe
-    #Valitse Liukuoven Hidastimet Ja Klikkaa Seuraava Vaihe
-    #Valitse Runko-osat Ja Klikkaa Seuraava Vaihe
+    Valitse Liukuoven Hidastimet Ja Klikkaa Seuraava Vaihe
+    Valitse Runko-osat Ja Klikkaa Seuraava Vaihe
+    # TODO: jatka tästä...
+
     #Valitse Kehäsävy Ja Klikkaa Seuraava Vaihe
     #Valitse Mieleisesi Ovimalli Tästä Ja Klikkaa Seuraava Vaihe
     #Lisää, Poista Tai Säädä Jakolistoja Mielesi Mukaan Ja Klikkaa Seuraava Vaihe
