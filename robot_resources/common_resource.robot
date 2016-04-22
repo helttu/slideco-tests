@@ -126,17 +126,18 @@ Kenen Makuuhuone Kysymys 2/2
 	Wait Until Element Is Visible  		//div[@id='q-refine']/div[2]/div[2]/div[4]/div    timeout=30s
 
 Valitse Mieleisesi Malli Suunnitelmasi Pohjaksi
-	# Mekot
-	Click Element  						//div[@id='q-refine']/div[2]/div[2]/div[4]/div
+	# Mekot ja puvut
+	Click Element  						//*[@id='q-refine']/div[2]/div[2]/div[4]/div[1]
 	Wait Until Element Is Visible  		//section[@id='section-progress_navigation']/div[5]/span    timeout=30s
 	Click Element    					//section[@id='section-progress_navigation']/div[5]/span
 	Wait Until Element Is Visible    	//section[@id='section-progress_navigation']/div[5]/span    timeout=30s
 
 Klikkaa Seurava Vaihe Huoneen Kuva Sivulla
 	Click Element  						//section[@id='section-progress_navigation']/div[5]/span
-	Wait Until Element Is Visible  		name=full_name    								timeout=30s
+	Wait Until Element Is Visible  		//*[@id='section-sidebar_storage']/div/div[4]/form/button    								timeout=30s
 
 Tallenna Suunnitelma, Lähetä Ja Ota Komerokoodi Talteen
+	Click Element   					//*[@id='section-sidebar_storage']/div/div[4]/form/button
 	# Nimi ja asuinpaikka
 	Input Text  						name=full_name    				Testiautomaatio Helsinki
 	Wait Until Element Is Visible   	name=email    					timeout=30s
