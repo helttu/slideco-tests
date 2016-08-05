@@ -4,7 +4,7 @@ Resource          ../robot_resources/common_resource.robot
 *** Test Cases ***
 Don't Allow String Values
     [Tags]  valmis
-    Sisäänkirjaudu Slideco Management System        sami.stedt@q-factory.fi    FinnDSami#9
+    Sisäänkirjaudu Slideco Management System        sami.stedt@q-factory.fi    aaa
     Klikkaa Set Prices
     Syötä Merkkijono VAT Multiplier Kenttään        twenty-three
     Tarkista Että Merkkijonoa Ei Hyväksytä
@@ -12,7 +12,7 @@ Don't Allow String Values
 
 Don't Allow Empty Values
     [Tags]  valmis
-    Sisäänkirjaudu Slideco Management System        sami.stedt@q-factory.fi    FinnDSami#9
+    Sisäänkirjaudu Slideco Management System        sami.stedt@q-factory.fi    aaa
     Klikkaa Set Prices
     Syötä Merkkijono VAT Multiplier Kenttään        \
     Tarkista Että Merkkijonoa Ei Hyväksytä

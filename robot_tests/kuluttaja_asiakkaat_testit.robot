@@ -19,20 +19,14 @@ Suunnitelman Tekeminen Ja Komerokoodin Tallennus
     Valitse Mieleisesi Liukuoviprofiili
     Valitse Mieleisesi Profiilisävy Ja Klikkaa Seuraava Vaihe
     Valitse Liukuoven Hidastimet Ja Klikkaa Seuraava Vaihe
+    Valitse Mieleisesi Ovimalli Tästä Ja Klikkaa Seuraava Vaihe
+    Lisää, Poista Tai Säädä Jakolistoja Mielesi Mukaan Ja Klikkaa Seuraava Vaihe
+    Valitse Materiaalit Ja Klikkaa Seuraava Vaihe
     Valitse Runko-osat Ja Klikkaa Seuraava Vaihe
-    # TODO: jatka tästä...
-
-    #Valitse Kehäsävy Ja Klikkaa Seuraava Vaihe
-    #Valitse Mieleisesi Ovimalli Tästä Ja Klikkaa Seuraava Vaihe
-    #Lisää, Poista Tai Säädä Jakolistoja Mielesi Mukaan Ja Klikkaa Seuraava Vaihe
-    #Valitse Materiaalit Ja Klikkaa Seuraava Vaihe
-    #Valitse Runkosävy
-    #Mihin Käytät Vaatekaappiasi Kysymys 1/2
-    #Kenen Makuuhuone Kysymys 2/2
-    #Valitse Mieleisesi Malli Suunnitelmasi Pohjaksi
-    #Klikkaa Seurava Vaihe Huoneen Kuva Sivulla
-    #Tallenna Suunnitelma, Lähetä Ja Ota Komerokoodi Talteen
-    [Teardown]    Close Browser
+    Valitse Kehäsävy Ja Klikkaa Seuraava Vaihe
+    Syötä Nimi, Asuinpaikkakunta Ja Sähköpostiosoite
+    Tallenna Suunnitelma, Lähetä Ja Ota Komerokoodi Talteen
+	[Teardown]    Close Browser
 
 *** Keywords ***
 Avaa Wardrobe Builder
@@ -114,7 +108,7 @@ Lisää, Poista Tai Säädä Jakolistoja Mielesi Mukaan Ja Klikkaa Seuraava Vaih
 
 Valitse Materiaalit Ja Klikkaa Seuraava Vaihe
 	# Peilit
-	Click Element    					//*[text()[contains(.,'peilit')]]
+	Click Element    					//section[@id='section-sidebar_materials']/div[2]/div/div[2]/div[2]/div[3]
 	Wait Until Element Is Visible    	css=img[alt="panelmaterial_finland_kirkas_peili"]    timeout=30s
 	# Kirkas peili
 	Click Element     					css=img[alt="panelmaterial_finland_kirkas_peili"]
@@ -160,7 +154,7 @@ Klikkaa Seurava Vaihe Huoneen Kuva Sivulla
 	Click Element  						//section[@id='section-progress_navigation']/div[5]/span
 	Wait Until Element Is Visible  		//*[@id='section-sidebar_storage']/div/div[4]/form/button    								timeout=30s
 
-Tallenna Suunnitelma, Lähetä Ja Ota Komerokoodi Talteen
+Syötä Nimi, Asuinpaikkakunta Ja Sähköpostiosoite
 	Click Element   					//*[@id='section-sidebar_storage']/div/div[4]/form/button
 	# Nimi ja asuinpaikka
 	Input Text  						name=full_name    				Testiautomaatio Helsinki
@@ -168,6 +162,8 @@ Tallenna Suunnitelma, Lähetä Ja Ota Komerokoodi Talteen
 	# Sähköposti
 	Input Text  						name=email    					sami.stedt@q-factory.fi
 	Wait Until Element Is Visible   	//*[@id='section-sidebar_storage']/div/div[4]/form/button    	timeout=30s
+
+Tallenna Suunnitelma, Lähetä Ja Ota Komerokoodi Talteen
 	Click Element   					//*[@id='section-sidebar_storage']/div/div[4]/form/button
 	Wait Until Element Is Visible   	//*[@id='section-sidebar_storage']/div/div[4]/form/div[2]/span[1]    timeout=30s
 	${koodi_1}=   						Get Text    //*[@id='section-sidebar_storage']/div/div[4]/form/div[2]/span[1]
